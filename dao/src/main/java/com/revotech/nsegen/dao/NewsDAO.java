@@ -3,6 +3,7 @@ package com.revotech.nsegen.dao;
 import com.revotech.nsegen.constants.Queries;
 import com.revotech.nsegen.datasource.DataSource;
 import com.revotech.nsegen.entities.News;
+import com.revotech.nsegen.exceptions.DAOException;
 import org.apache.log4j.Logger;
 
 import java.beans.PropertyVetoException;
@@ -26,14 +27,14 @@ public class NewsDAO implements INewsDAO {
         Locale.setDefault(Locale.ENGLISH);
     }
 
-    public NewsDAO getInstance(){
+    public static NewsDAO getInstance(){
         if(newsDAO == null){
             newsDAO = new NewsDAO();
         }
         return newsDAO;
     }
 
-    private int getAuthorId(String nickName){
+    private int getAuthorId(String nickName) throws DAOException{
 
         int authorID = 0;
 
@@ -49,12 +50,13 @@ public class NewsDAO implements INewsDAO {
             }
 
         } catch (IOException | SQLException | PropertyVetoException e) {
-            log.info(e);
+            log.error("DAO getAuthorId failed " + e);
+            throw new DAOException("DAO getAuthorId failed " + e);
         }
         return authorID;
     }
 
-    public int addEntity(News news) throws SQLException {
+    public int addEntity(News news) throws DAOException {
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement prst = connection.prepareStatement(Queries.SQL_ADD_NEWS)) {
 
@@ -69,32 +71,48 @@ public class NewsDAO implements INewsDAO {
 
             return prst.executeUpdate();
 
-        } catch (PropertyVetoException | IOException e) {
+        } catch (PropertyVetoException | IOException | SQLException e) {
             e.printStackTrace();
         }
         return 0;
     }
 
-    public List<News> getEntities() throws PropertyVetoException, SQLException, IOException {
+    public List<News> getEntities() throws DAOException {
         List<News> news = new ArrayList<>();
 
-        Connection connection = DataSource.getInstance().getConnection();
-        Statement statement = connection.createStatement();
+        try(Connection connection = DataSource.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(Queries.SQL_GET_LIST_OF_NEWS)){
 
-        ResultSet resultSet = statement.executeQuery(Queries.SQL_GET_LIST_OF_NEWS);
-
-        while (resultSet.next()) {
-            news.add(createNews(resultSet));
+            while (resultSet.next()) {
+                news.add(createNews(resultSet));
+            }
+        } catch (PropertyVetoException | SQLException | IOException e){
+            e.printStackTrace();
+            throw new DAOException(e);
         }
 
         return news;
     }
 
-    public int deleteEntity(int id) throws SQLException {
-        return 0;
+    public int deleteEntity(int id) throws DAOException {
+
+        int amtDelete = 0;
+
+        try(Connection connection = DataSource.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(Queries.SQL_DELETE_NEWS)){
+
+            preparedStatement.setInt(1, id);
+            amtDelete = preparedStatement.executeUpdate();
+
+        } catch(PropertyVetoException | SQLException | IOException e) {
+
+            throw new DAOException("DAO DeleteEntity failed " + e);
+        }
+        return amtDelete;
     }
 
-    public int updateEntity(News entity) throws SQLException {
+    public int updateEntity(News entity) throws DAOException {
         return 0;
     }
 

@@ -1,0 +1,79 @@
+body, div, a, span{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 1000px;
+    margin: auto;
+}
+
+.newsImg{
+    vertical-align: top;
+    height: 100px;
+    width: 100px;
+}
+
+.date,
+.author{
+    margin: 10px;
+}
+
+.newsImg>img{
+    height: 100px;
+    width: 100px;
+}
+.newsContent{
+    height: 200px;
+    width: 680px;
+    overflow: hidden;
+}
+
+.item-content{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.deleteButton{
+    float: right;
+}
+
+.item{
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.news-list{
+    width: 790px;
+}
+
+.nav-bar{
+    vertical-align: top;
+    width: 200px;
+}
+
+.nav-bar,
+.news-add,
+.news-list,
+.newsContent,
+.newsImg{
+    display: inline-block;
+}
+
+.content-input{
+    height: 200px;
+    width: 250px;
+    vertical-align: top;
+}
+
+.content-input input{
+    height: 190px;
+    width: 250px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
