@@ -41,11 +41,19 @@ public class MainController extends HttpServlet {
                 case "delete": command = new DeleteNewsCommand(); break;
                 case "viewAll": command = new ViewAllNewsCommand(); break;
                 case "addNews": command = new AddNewsCommand(); break;
+                case "editNewsPage": command = new EditNewsPageCommand(); break;
+                case "editNews": command = new EditNewsCommand(); break;
+                default: command = new ErrorPageCommand(); break;
             }
 
         } else {
             command = new ViewAllNewsCommand();
         }
-        command.execute(req,resp);
+        try {
+            command.execute(req, resp);
+        } catch(ServletException | IOException e){
+            req.setAttribute("error", "Error 404: page not found");
+            req.getRequestDispatcher("/WEB-INF/view/error.jsp").forward(req, resp);
+        }
     }
 }

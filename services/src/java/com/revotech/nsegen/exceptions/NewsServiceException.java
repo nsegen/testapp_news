@@ -5,16 +5,12 @@ package com.revotech.nsegen.exceptions;
  */
 public class NewsServiceException extends Exception {
 
-    private Exception e;
-
     public NewsServiceException(String message, Exception e) {
-        super(message);
-        this.e = e;
+        super(message, e);
     }
 
-    @Override
-    public String toString() {
-        return "NewsServiceException: " + e;
+    public NewsServiceException(String message) {
+        super(message);
     }
 
 }

@@ -9,4 +9,6 @@ public class NotChangeDataBaseException extends Exception {
         super(message);
     }
 
+
+
 }

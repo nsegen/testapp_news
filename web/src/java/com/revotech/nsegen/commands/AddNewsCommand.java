@@ -5,6 +5,7 @@ import com.revotech.nsegen.entities.News;
 import com.revotech.nsegen.exceptions.DAOException;
 import com.revotech.nsegen.exceptions.NewsServiceException;
 import com.revotech.nsegen.exceptions.NotChangeDataBaseException;
+import com.revotech.nsegen.services.ImageService;
 import com.revotech.nsegen.services.NewsService;
 import org.apache.log4j.Logger;
 
@@ -22,9 +23,10 @@ import java.util.Date;
 /**
  * Created by Revotech on 06.07.16.
  */
+
 public class AddNewsCommand implements Command {
 
-    Logger log = Logger.getLogger(AddNewsCommand.class);
+    private Logger log = Logger.getLogger(AddNewsCommand.class);
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -33,34 +35,10 @@ public class AddNewsCommand implements Command {
             NewsService.getInstance().addNews(news);
             response.sendRedirect("controller?action=viewAll");
         } catch (NewsServiceException | NotChangeDataBaseException e) {
-            e.printStackTrace();
-            request.setAttribute("error", e.getMessage());
-            request.getRequestDispatcher("/WEB-INF/view/error.jsp").forward(request, response);
+            log.error("News don't added " + e);
+            request.setAttribute("error", "News don't added");
+            //request.getRequestDispatcher("/WEB-INF/view/error.jsp").forward(request, response);
         }
-    }
-
-    private String uploadImage(Part part) throws IOException{
-        final String fileName = getFileName(part);
-        String path = new File(".").getAbsolutePath();
-        log.info("____________________________________________________________________________________________________");
-        log.info(path);
-        log.info("____________________________________________________________________________________________________");
-        try(OutputStream out = new FileOutputStream(new File(path + File.separator + fileName));
-            InputStream fileContent = part.getInputStream()) {
-
-            int read = 0;
-            final byte[] bytes = new byte[1024];
-
-            while ((read = fileContent.read(bytes)) != -1) {
-                out.write(bytes, 0, read);
-            }
-
-        } catch (FileNotFoundException fne) {
-            log.info("Problems during file upload. Error: {0}" +
-                    Arrays.toString(new Object[]{fne.getMessage()}));
-        }
-
-        return path + File.separator + fileName;
     }
 
     private News createNews(HttpServletRequest request) throws ServletException, IOException{
@@ -74,17 +52,7 @@ public class AddNewsCommand implements Command {
             log.info("Date can't be parsed");
         }
         String title = request.getParameter("title");
-        return new News(0, title, nickName, content, uploadImage(request.getPart("image")), date);
-    }
-
-    private String getFileName(final Part part) {
-        for (String content : part.getHeader("content-disposition").split(";")) {
-            if (content.trim().startsWith("filename")) {
-                return content.substring(
-                        content.indexOf('=') + 1).trim().replace("\"", "");
-            }
-        }
-        return null;
+        return new News(0, title, nickName, content, ImageService.uploadImage(request.getPart("image"), title), date);
     }
 
 }

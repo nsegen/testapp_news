@@ -25,10 +25,25 @@ public class NewsService {
         try {
             news = daoService.getEntities();
         } catch(DAOException e) {
-            e.printStackTrace();
+            log.error("NewsService getListOfNews failed " + e);
             throw new NewsServiceException("News don't deleted", e);
         }
         return news;
+    }
+
+    public void editNews(News news) throws NotChangeDataBaseException, NewsServiceException{
+
+        try{
+            if(daoService.updateEntity(news)==0){
+                log.error("NewsService editNews failed: amount of changes rows == 0");
+                throw new NotChangeDataBaseException("News " + news.getId() + " don't edited");
+            }
+
+        } catch (DAOException e) {
+            log.error("NewsService editNews failed " + e);
+            throw new NewsServiceException("News don't edited" + e);
+        }
+
     }
 
     private NewsService(){
@@ -45,24 +60,26 @@ public class NewsService {
     public void deleteNews(int id) throws NewsServiceException, NotChangeDataBaseException{
         try{
             if(daoService.deleteEntity(id)==0){
-                throw new NotChangeDataBaseException("News " + id + " don't deleted");
+                log.error("NewsService deleteNews failed: amount of changes rows == 0");
+                throw new NotChangeDataBaseException("News " + id + " don't deleted ");
             }
 
         } catch (DAOException e) {
-            e.printStackTrace();
-            throw new NewsServiceException("News don't deleted", e);
+            log.error("NewsService deleteNews failed " + e);
+            throw new NewsServiceException("News don't deleted" + e);
         }
     }
     public void addNews(News news) throws NewsServiceException, NotChangeDataBaseException{
 
         try{
             if(daoService.addEntity(news)==0){
-                throw new NotChangeDataBaseException("News " + news.getTitle() + " don't added");
+                log.error("NewsService addNews failed: amount of changes rows == 0");
+                throw new NotChangeDataBaseException("News " + news.getId() + " don't added");
             }
 
         } catch (DAOException e) {
-            e.printStackTrace();
-            throw new NewsServiceException("News don't deleted", e);
+            log.error("NewsService addNews failed " + e);
+            throw new NewsServiceException("News don't added" + e);
         }
     }
 

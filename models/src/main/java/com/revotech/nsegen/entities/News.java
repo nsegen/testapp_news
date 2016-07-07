@@ -4,9 +4,10 @@ package com.revotech.nsegen.entities;
  * Created by Revotech on 05.07.16.
  */
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class News {
+public class News implements Serializable {
     private int id;
     private String title;
     private String author;
