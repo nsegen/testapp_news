@@ -34,6 +34,10 @@ public class NewsDAO implements INewsDAO {
         return newsDAO;
     }
 
+    public News getNewsById(Integer id){
+       return null;
+    }
+
     private int getAuthorId(String nickName) throws DAOException{
 
         int authorID = 0;
@@ -58,13 +62,10 @@ public class NewsDAO implements INewsDAO {
 
     public int addEntity(News news) throws DAOException {
 
-        int amtAdd = 0;
-
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement prst = connection.prepareStatement(Queries.SQL_ADD_NEWS)) {
 
             int authorID = getAuthorId(news.getAuthor());
-
             prst.setString(1, news.getTitle());
             prst.setDate(2, new Date(news.getDate().getTime()));
             byte[] content = news.getContent().getBytes("utf-8");
@@ -72,13 +73,13 @@ public class NewsDAO implements INewsDAO {
             prst.setInt(4, authorID);
             prst.setString(5, news.getImgUrl());
 
-            amtAdd = prst.executeUpdate();
+            return prst.executeUpdate();
 
         } catch (PropertyVetoException | IOException | SQLException e) {
             log.error("DAO addEntity failed " + e);
             throw new DAOException("DAO addEntity failed " + e);
         }
-        return amtAdd;
+
     }
 
     public List<News> getEntities() throws DAOException {
@@ -101,23 +102,21 @@ public class NewsDAO implements INewsDAO {
 
     public int deleteEntity(int id) throws DAOException {
 
-        int amtDelete = 0;
-
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(Queries.SQL_DELETE_NEWS)){
 
             preparedStatement.setInt(1, id);
-            amtDelete = preparedStatement.executeUpdate();
+
+            return preparedStatement.executeUpdate();
 
         } catch(PropertyVetoException | SQLException | IOException e) {
             log.error("DAO deleteEntity failed " + e);
             throw new DAOException("DAO deleteEntity failed " + e);
         }
-        return amtDelete;
+
     }
 
     public int updateEntity(News news) throws DAOException {
-        int amtEdit = 0;
 
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement prst = connection.prepareStatement(Queries.UPDATE_NEWS)) {
@@ -128,13 +127,12 @@ public class NewsDAO implements INewsDAO {
             prst.setString(3, news.getImgUrl());
             prst.setInt(4, news.getId());
 
-            amtEdit = prst.executeUpdate();
+            return prst.executeUpdate();
 
         } catch (PropertyVetoException | IOException | SQLException e) {
             log.error("DAO editEntity failed " + e);
             throw new DAOException("DAO editEntity failed " + e);
         }
-        return amtEdit;
     }
 
     private News createNews(ResultSet resultSet) throws SQLException {

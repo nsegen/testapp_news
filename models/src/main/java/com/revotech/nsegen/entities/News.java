@@ -8,20 +8,32 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class News implements Serializable {
-    private int id;
+
+
+    private Integer id;
     private String title;
     private String author;
     private String content;
     private String imgUrl;
     private Date date;
 
-    public News(int id, String title, String nickName, String content, String imgUrl, Date date) {
+    public News(Integer id, String title, String nickName, String content, String imgUrl, Date date) {
         this.id = id;
         this.title = title;
         this.author = nickName;
         this.content = content;
         this.imgUrl = imgUrl;
         this.date = date;
+    }
+
+    public News(String title, String nickName, String content, String imgUrl, Date date) {
+        new News(-1, title, nickName, content, imgUrl, date);
+        /*this.id = -1;
+        this.title = title;
+        this.author = nickName;
+        this.content = content;
+        this.imgUrl = imgUrl;
+        this.date = date;*/
     }
 
     public int getId() {
@@ -48,4 +60,25 @@ public class News implements Serializable {
         return date;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof News)) return false;
+
+        News news = (News) o;
+
+        return getId() == news.getId() && getTitle().equals(news.getTitle()) && getAuthor().equals(news.getAuthor()) && getContent().equals(news.getContent()) && getImgUrl().equals(news.getImgUrl()) && getDate().equals(news.getDate());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId();
+        result = 31 * result + title.hashCode();
+        result = 31 * result + author.hashCode();
+        result = 31 * result + content.hashCode();
+        result = 31 * result + imgUrl.hashCode();
+        result = 31 * result + date.hashCode();
+        return result;
+    }
 }

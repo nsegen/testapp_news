@@ -15,6 +15,9 @@ public class EditNewsPageCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        Integer id = Integer.parseInt(request.getParameter("id"));
+        //News news = newsServise.getNewsById(id);
+        request.setAttribute("id", request.getParameter("id"));
         request.getRequestDispatcher("/WEB-INF/view/editNews.jsp").forward(request, response);
 
     }

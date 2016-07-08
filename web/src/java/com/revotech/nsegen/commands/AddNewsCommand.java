@@ -52,7 +52,7 @@ public class AddNewsCommand implements Command {
             log.info("Date can't be parsed");
         }
         String title = request.getParameter("title");
-        return new News(0, title, nickName, content, ImageService.uploadImage(request.getPart("image"), title), date);
+        return new News(title, nickName, content, ImageService.uploadImage(request.getPart("image"), title), date);
     }
 
 }

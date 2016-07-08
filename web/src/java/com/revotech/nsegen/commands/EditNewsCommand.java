@@ -32,6 +32,7 @@ public class EditNewsCommand implements Command {
     }
 
     private News createNews(HttpServletRequest request) throws ServletException, IOException{
+
         int id = Integer.valueOf(request.getParameter("id"));
         String content = request.getParameter("content");
         String title = request.getParameter("title");

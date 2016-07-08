@@ -26,6 +26,7 @@
                 <p class="content-input">Content: <input type="text" placeholder="Введите текст..." name="content">
                 <p class="image-input">Image: <input type="file" name="image"></p>
                 <input type="hidden" name="action" value="editNews"/>
+                <input type="hidden" name="id" value="${id}"/>
                 <p><input type="submit" value="Отправить"></p>
             </form>
 

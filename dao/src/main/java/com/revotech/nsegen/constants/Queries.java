@@ -26,9 +26,7 @@ public final class Queries {
 
     public static final String UPDATE_NEWS =
             "UPDATE NIKITASEGEN.NEWS " +
-            "SET TITLE = ? " +
-            "SET CONTENT = ? " +
-            "SET IMG_URL = ?" +
+            "SET TITLE = ?, CONTENT = ?, IMG_URL = ?" +
             "WHERE ID = ?";
 
     private Queries(){}
