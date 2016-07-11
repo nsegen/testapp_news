@@ -30,6 +30,7 @@
                     <input type="hidden" value="${news.id}" name="id">
                     <input type="submit" value="Edit">
                 </form>
+                <a href=""><button>Edit</button></a>
                 <form class="deleteButton" action="controller" method="post">
                     <input type="hidden" value="delete" name="action">
                     <input type="hidden" value="${news.id}" name="id">

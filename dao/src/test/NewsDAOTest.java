@@ -25,7 +25,7 @@ public class NewsDAOTest {
     @Before
     public void setUp() throws Exception {
         newsDAO = NewsDAO.getInstance();
-        testNews = new News(0,"test news", "fgapon", "test content", "test url", new Date("16/04/1997"));
+        testNews = new News("test news", "fgapon", "test content", "test url", new Date("16/04/1997"));
     }
 
     @After
@@ -36,10 +36,11 @@ public class NewsDAOTest {
     @Test
     public void addEntity() throws Exception {
         NewsDAO newsDAO = NewsDAO.getInstance();
-        Assert.assertEquals("News don't added", 1, newsDAO.addEntity(testNews));
+        Integer id = newsDAO.addEntity(testNews);
+        testNews.setId(id);
         newses = newsDAO.getEntities();
         expectedNews = newses.get(newses.size()-1);
-        log.info("++++++++++++++++++++++++++++++++" + expectedNews.getTitle());
+        log.info("++++++++++++++++++++++++++++++++" + expectedNews.getId());
         Assert.assertEquals("Add news failed: title mismatch", testNews.getTitle(), expectedNews.getTitle().trim());
         Assert.assertEquals("Add news failed: content mismatch", testNews.getContent(), expectedNews.getContent());
         Assert.assertEquals("Add news failed: date mismatch", testNews.getDate(), expectedNews.getDate());

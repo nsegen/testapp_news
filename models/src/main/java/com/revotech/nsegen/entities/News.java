@@ -27,13 +27,12 @@ public class News implements Serializable {
     }
 
     public News(String title, String nickName, String content, String imgUrl, Date date) {
-        new News(-1, title, nickName, content, imgUrl, date);
-        /*this.id = -1;
+        this.id = 0;
         this.title = title;
         this.author = nickName;
         this.content = content;
         this.imgUrl = imgUrl;
-        this.date = date;*/
+        this.date = date;
     }
 
     public int getId() {
@@ -58,6 +57,30 @@ public class News implements Serializable {
 
     public Date getDate() {
         return date;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     @Override

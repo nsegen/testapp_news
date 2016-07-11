@@ -61,24 +61,36 @@ public class NewsDAO implements INewsDAO {
     }
 
     public int addEntity(News news) throws DAOException {
-
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement prst = connection.prepareStatement(Queries.SQL_ADD_NEWS)) {
 
             int authorID = getAuthorId(news.getAuthor());
             prst.setString(1, news.getTitle());
+            log.info(news.getDate());
             prst.setDate(2, new Date(news.getDate().getTime()));
-            byte[] content = news.getContent().getBytes("utf-8");
-            prst.setBytes(3, content);
+            prst.setString(3, news.getContent());
             prst.setInt(4, authorID);
             prst.setString(5, news.getImgUrl());
-
-            return prst.executeUpdate();
+            prst.executeUpdate();
 
         } catch (PropertyVetoException | IOException | SQLException e) {
             log.error("DAO addEntity failed " + e);
             throw new DAOException("DAO addEntity failed " + e);
         }
+
+        Integer id = null;
+        try(Connection connection = DataSource.getInstance().getConnection();
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(Queries.SQL_GET_LAST_NEWS_ID)){
+            log.info(rs.getMetaData().getColumnCount() + "_______________________________________________________");
+            if(rs.next()){
+                id = rs.getInt(1);
+            }
+        } catch (PropertyVetoException | IOException | SQLException e){
+            log.error("DAO addEntity failed " + e);
+            throw new DAOException("DAO addEntity failed " + e);
+        }
+        return id;
 
     }
 
@@ -119,11 +131,10 @@ public class NewsDAO implements INewsDAO {
     public int updateEntity(News news) throws DAOException {
 
         try(Connection connection = DataSource.getInstance().getConnection();
-            PreparedStatement prst = connection.prepareStatement(Queries.UPDATE_NEWS)) {
+            PreparedStatement prst = connection.prepareStatement(Queries.SQL_UPDATE_NEWS)) {
 
             prst.setString(1, news.getTitle());
-            byte[] content = news.getContent().getBytes("utf-8");
-            prst.setBytes(2, content);
+            prst.setString(2, news.getContent());
             prst.setString(3, news.getImgUrl());
             prst.setInt(4, news.getId());
 
@@ -139,9 +150,7 @@ public class NewsDAO implements INewsDAO {
         int id = resultSet.getInt("ID");
         String nickName = resultSet.getString("NICK_NAME");
         String title = resultSet.getString("TITLE");
-        Blob blobContent = resultSet.getBlob("CONTENT");
-        byte[] byteContent = blobContent.getBytes(1, (int)blobContent.length());
-        String content = new String(byteContent);
+        String content = resultSet.getString("CONTENT");
         Date date = resultSet.getDate("RELEASE_DATE");
         String imgUrl = resultSet.getString("IMG_URL");
 

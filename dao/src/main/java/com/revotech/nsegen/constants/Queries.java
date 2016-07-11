@@ -24,10 +24,12 @@ public final class Queries {
             "DELETE FROM NIKITASEGEN.NEWS " +
             "WHERE ID = ?";
 
-    public static final String UPDATE_NEWS =
+    public static final String SQL_UPDATE_NEWS =
             "UPDATE NIKITASEGEN.NEWS " +
             "SET TITLE = ?, CONTENT = ?, IMG_URL = ?" +
             "WHERE ID = ?";
+
+    public static final String SQL_GET_LAST_NEWS_ID = "SELECT news_seq.currval FROM NIKITASEGEN.NEWS";
 
     private Queries(){}
 }
