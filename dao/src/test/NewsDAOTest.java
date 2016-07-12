@@ -25,7 +25,12 @@ public class NewsDAOTest {
     @Before
     public void setUp() throws Exception {
         newsDAO = NewsDAO.getInstance();
-        testNews = new News("test news", "fgapon", "test content", "test url", new Date("16/04/1997"));
+        testNews = new News();
+        testNews.setTitle("Тест добавления");
+        testNews.setAuthor("fgapon");
+        testNews.setContent("ололол");
+        testNews.setImgUrl("test url");
+        testNews.setDate(new Date("16/04/1997"));
     }
 
     @After
@@ -38,15 +43,29 @@ public class NewsDAOTest {
         NewsDAO newsDAO = NewsDAO.getInstance();
         Integer id = newsDAO.addEntity(testNews);
         testNews.setId(id);
-        newses = newsDAO.getEntities();
-        expectedNews = newses.get(newses.size()-1);
-        log.info("++++++++++++++++++++++++++++++++" + expectedNews.getId());
-        Assert.assertEquals("Add news failed: title mismatch", testNews.getTitle(), expectedNews.getTitle().trim());
+        expectedNews = newsDAO.getNewsById(id);
+        Assert.assertEquals("News don't add: id == null", (testNews.getId() != null), true);
+        Assert.assertEquals("Add news failed: title mismatch", testNews.getTitle(), expectedNews.getTitle());
         Assert.assertEquals("Add news failed: content mismatch", testNews.getContent(), expectedNews.getContent());
         Assert.assertEquals("Add news failed: date mismatch", testNews.getDate(), expectedNews.getDate());
         Assert.assertEquals("Add news failed: author mismatch", testNews.getAuthor(), expectedNews.getAuthor());
         Assert.assertEquals("Add news failed: img url mismatch", testNews.getImgUrl(), expectedNews.getImgUrl());
     }
+
+    @Test
+    public void getNewsByID() throws Exception{
+        NewsDAO newsDAO = NewsDAO.getInstance();
+        Integer id = newsDAO.addEntity(testNews);
+        testNews.setId(id);
+        expectedNews = newsDAO.getNewsById(id);
+        Assert.assertEquals("get news by id news failed: id mismatch", testNews.getId(), expectedNews.getId());
+        Assert.assertEquals("get news by id news failed: title mismatch", testNews.getTitle(), expectedNews.getTitle().trim());
+        Assert.assertEquals("get news by id news failed: content mismatch", testNews.getContent(), expectedNews.getContent());
+        Assert.assertEquals("get news by id news failed: date mismatch", testNews.getDate(), expectedNews.getDate());
+        Assert.assertEquals("get news by id news failed: author mismatch", testNews.getAuthor(), expectedNews.getAuthor());
+        Assert.assertEquals("get news by id news failed: img url mismatch", testNews.getImgUrl(), expectedNews.getImgUrl());
+    }
+
 
     @Test
     public void getEntities() throws Exception {
@@ -60,6 +79,20 @@ public class NewsDAOTest {
 
     @Test
     public void updateEntity() throws Exception {
+        NewsDAO newsDAO = NewsDAO.getInstance();
+        Integer id = newsDAO.addEntity(testNews);
+        testNews.setId(id);
+        testNews.setTitle("Change");
+        testNews.setContent("ololo");
+        testNews.setContent("rapapa");
+        newsDAO.updateEntity(testNews);
+        expectedNews = newsDAO.getNewsById(id);
+        Assert.assertEquals("update news failed: id mismatch", testNews.getId(), expectedNews.getId());
+        Assert.assertEquals("update news failed: title mismatch", testNews.getTitle(), expectedNews.getTitle().trim());
+        Assert.assertEquals("update news failed: content mismatch", testNews.getContent(), expectedNews.getContent());
+        Assert.assertEquals("update news failed: date mismatch", testNews.getDate(), expectedNews.getDate());
+        Assert.assertEquals("update news failed: author mismatch", testNews.getAuthor(), expectedNews.getAuthor());
+        Assert.assertEquals("update news failed: img url mismatch", testNews.getImgUrl(), expectedNews.getImgUrl());
 
     }
 

@@ -17,25 +17,16 @@ public class News implements Serializable {
     private String imgUrl;
     private Date date;
 
-    public News(Integer id, String title, String nickName, String content, String imgUrl, Date date) {
-        this.id = id;
-        this.title = title;
-        this.author = nickName;
-        this.content = content;
-        this.imgUrl = imgUrl;
-        this.date = date;
+    public News(){
+        this.id = null;
+        this.title = null;
+        this.author = null;
+        this.content = null;
+        this.imgUrl = null;
+        this.date = null;
     }
 
-    public News(String title, String nickName, String content, String imgUrl, Date date) {
-        this.id = 0;
-        this.title = title;
-        this.author = nickName;
-        this.content = content;
-        this.imgUrl = imgUrl;
-        this.date = date;
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

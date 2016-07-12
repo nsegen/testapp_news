@@ -6,6 +6,7 @@ import com.revotech.nsegen.entities.News;
 import com.revotech.nsegen.exceptions.DAOException;
 import org.apache.log4j.Logger;
 
+import javax.xml.crypto.Data;
 import java.beans.PropertyVetoException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -16,6 +17,7 @@ import java.util.Locale;
 
 /**
  * Created by Revotech on 05.07.16.
+ * This class working with database and news entity
  */
 public class NewsDAO implements INewsDAO {
 
@@ -23,10 +25,16 @@ public class NewsDAO implements INewsDAO {
 
     private static NewsDAO newsDAO;
 
+    /**
+     * constructor is private, because this class is a singleton
+     */
     private NewsDAO(){
         Locale.setDefault(Locale.ENGLISH);
     }
 
+    /**
+     * @return instance NewsDAO
+     */
     public static NewsDAO getInstance(){
         if(newsDAO == null){
             newsDAO = new NewsDAO();
@@ -34,10 +42,38 @@ public class NewsDAO implements INewsDAO {
         return newsDAO;
     }
 
-    public News getNewsById(Integer id){
-       return null;
+    /**
+     * This method used when we need news and we know their id
+     * @param id this is id news which we need
+     * @return News which we need
+     * @throws DAOException
+     */
+    public News getNewsById(Integer id) throws DAOException{
+
+        News news = null;
+
+        try(Connection connection = DataSource.getInstance().getConnection();
+            PreparedStatement prst = connection.prepareStatement(Queries.SQL_GET_NEWS_BY_ID)){
+
+            prst.setInt(1, id);
+
+            ResultSet rs = prst.executeQuery();
+            if(rs.next()){
+                news = createNews(rs);
+            }
+        } catch(IOException | SQLException | PropertyVetoException e) {
+            log.error("DAO GetNewsById failed " + e);
+            throw new DAOException("DAO GetNewsById failed " + e);
+        }
+        return news;
     }
 
+    /**
+     * This method is used to find user according according to his nickname
+     * @param nickName this is author nickname
+     * @return user id with given nickname
+     * @throws DAOException
+     */
     private int getAuthorId(String nickName) throws DAOException{
 
         int authorID = 0;
@@ -47,11 +83,11 @@ public class NewsDAO implements INewsDAO {
 
             prst.setString(1, nickName);
 
-            try(ResultSet resultSet = prst.executeQuery()){
-                if(resultSet.next()) {
-                    authorID = resultSet.getInt("ID");
-                }
+            ResultSet resultSet = prst.executeQuery();
+            if(resultSet.next()) {
+                authorID = resultSet.getInt("ID");
             }
+            resultSet.close();
 
         } catch (IOException | SQLException | PropertyVetoException e) {
             log.error("DAO getAuthorId failed " + e);
@@ -60,17 +96,42 @@ public class NewsDAO implements INewsDAO {
         return authorID;
     }
 
-    public int addEntity(News news) throws DAOException {
+    private Integer getNextId() throws DAOException{
+        Integer id = null;
+        try(Connection connection = DataSource.getInstance().getConnection();
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(Queries.SQL_GET_NEWS_ID)){
+            if(rs.next()){
+                id = rs.getInt(1);
+            }
+        } catch (PropertyVetoException | IOException | SQLException e){
+            log.error("DAO addEntity failed " + e);
+            throw new DAOException("DAO getNextId failed " + e);
+        }
+
+        return id;
+    }
+
+    /**
+     * This method add record in table NEWS in database
+     * @param news This is news which will be add in database
+     * @return id news
+     * @throws DAOException
+     */
+    public Integer addEntity(News news) throws DAOException {
+
+        Integer id = getNextId();
+
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement prst = connection.prepareStatement(Queries.SQL_ADD_NEWS)) {
 
             int authorID = getAuthorId(news.getAuthor());
-            prst.setString(1, news.getTitle());
-            log.info(news.getDate());
-            prst.setDate(2, new Date(news.getDate().getTime()));
-            prst.setString(3, news.getContent());
-            prst.setInt(4, authorID);
-            prst.setString(5, news.getImgUrl());
+            prst.setInt(1, id);
+            prst.setString(2, news.getTitle());
+            prst.setDate(3, new Date(news.getDate().getTime()));
+            prst.setString(4, news.getContent());
+            prst.setInt(5, authorID);
+            prst.setString(6, news.getImgUrl());
             prst.executeUpdate();
 
         } catch (PropertyVetoException | IOException | SQLException e) {
@@ -78,22 +139,15 @@ public class NewsDAO implements INewsDAO {
             throw new DAOException("DAO addEntity failed " + e);
         }
 
-        Integer id = null;
-        try(Connection connection = DataSource.getInstance().getConnection();
-            Statement st = connection.createStatement();
-            ResultSet rs = st.executeQuery(Queries.SQL_GET_LAST_NEWS_ID)){
-            log.info(rs.getMetaData().getColumnCount() + "_______________________________________________________");
-            if(rs.next()){
-                id = rs.getInt(1);
-            }
-        } catch (PropertyVetoException | IOException | SQLException e){
-            log.error("DAO addEntity failed " + e);
-            throw new DAOException("DAO addEntity failed " + e);
-        }
         return id;
 
     }
 
+    /**
+     * This method return list of all news, which contains table NEWS
+     * @return List This is list of news
+     * @throws DAOException
+     */
     public List<News> getEntities() throws DAOException {
         List<News> news = new ArrayList<>();
 
@@ -112,6 +166,12 @@ public class NewsDAO implements INewsDAO {
         return news;
     }
 
+    /**
+     * This method delete records from table News, where id equals given id
+     * @param id News id which need to remove
+     * @return int Amount of changing row in database
+     * @throws DAOException
+     */
     public int deleteEntity(int id) throws DAOException {
 
         try(Connection connection = DataSource.getInstance().getConnection();
@@ -128,6 +188,12 @@ public class NewsDAO implements INewsDAO {
 
     }
 
+    /**
+     * Update record in table News in database
+     * @param news News which need to update
+     * @return int Amount of changing row in database
+     * @throws DAOException
+     */
     public int updateEntity(News news) throws DAOException {
 
         try(Connection connection = DataSource.getInstance().getConnection();
@@ -146,15 +212,24 @@ public class NewsDAO implements INewsDAO {
         }
     }
 
+    /**
+     * This method create News with parameter such as in result set
+     * @param resultSet
+     * @return News Creating news
+     * @throws SQLException
+     */
     private News createNews(ResultSet resultSet) throws SQLException {
-        int id = resultSet.getInt("ID");
-        String nickName = resultSet.getString("NICK_NAME");
-        String title = resultSet.getString("TITLE");
-        String content = resultSet.getString("CONTENT");
-        Date date = resultSet.getDate("RELEASE_DATE");
-        String imgUrl = resultSet.getString("IMG_URL");
 
-        return new News(id, title, nickName, content, imgUrl, date);
+        News news = new News();
+
+        news.setId(resultSet.getInt("ID"));
+        news.setAuthor(resultSet.getString("NICK_NAME"));
+        news.setTitle(resultSet.getString("TITLE"));
+        news.setContent(resultSet.getString("CONTENT"));
+        news.setDate(resultSet.getDate("RELEASE_DATE"));
+        news.setImgUrl(resultSet.getString("IMG_URL"));
+
+        return news;
     }
 
 }

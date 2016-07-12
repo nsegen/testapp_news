@@ -13,7 +13,7 @@ public final class Queries {
     public static final String SQL_ADD_NEWS =
             "INSERT " +
             "INTO NIKITASEGEN.NEWS (ID, TITLE, RELEASE_DATE, CONTENT, AUTHOR_id, IMG_URL) " +
-            "VALUES (news_seq.nextval, ?, ?, ?, ?, ?)";
+            "VALUES (?, ?, ?, ?, ?, ?)";
 
     public static final String SQL_GET_AUTHOR_ID =
             "SELECT ID " +
@@ -29,7 +29,13 @@ public final class Queries {
             "SET TITLE = ?, CONTENT = ?, IMG_URL = ?" +
             "WHERE ID = ?";
 
-    public static final String SQL_GET_LAST_NEWS_ID = "SELECT news_seq.currval FROM NIKITASEGEN.NEWS";
+    public static final String SQL_GET_NEWS_ID =
+            "SELECT news_seq.nextval" +
+            " FROM NIKITASEGEN.NEWS";
+
+    public static final String SQL_GET_NEWS_BY_ID =
+            SQL_GET_LIST_OF_NEWS +
+            " WHERE NIKITASEGEN.NEWS.ID = ?";
 
     private Queries(){}
 }

@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Revotech on 05.07.16.
  */
 public interface DAO<T> {
-    int addEntity(T entity) throws DAOException;
+    Integer addEntity(T entity) throws DAOException;
     List<T> getEntities() throws DAOException;
     int deleteEntity(int id) throws DAOException;
     int updateEntity(T entity) throws DAOException;
