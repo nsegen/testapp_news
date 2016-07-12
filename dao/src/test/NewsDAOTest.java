@@ -67,7 +67,7 @@ public class NewsDAOTest {
     }
 
 
-    @Test
+    /*@Test
     public void getEntities() throws Exception {
 
     }
@@ -75,7 +75,7 @@ public class NewsDAOTest {
     @Test
     public void deleteEntity() throws Exception {
 
-    }
+    }*/
 
     @Test
     public void updateEntity() throws Exception {
