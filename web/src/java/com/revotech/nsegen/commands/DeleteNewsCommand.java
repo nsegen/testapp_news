@@ -5,6 +5,7 @@ import com.revotech.nsegen.exceptions.NotChangeDataBaseException;
 import com.revotech.nsegen.services.NewsService;
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -17,16 +18,9 @@ public class DeleteNewsCommand implements Command {
     private Logger log = Logger.getLogger(DeleteNewsCommand.class);
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-        int id = Integer.valueOf(request.getParameter("id"));
+        NewsService.getInstance().deleteNews(request, response);
 
-        try {
-            NewsService.getInstance().deleteNews(id);
-            response.sendRedirect("controller?action=viewAll");
-        } catch (NewsServiceException | NotChangeDataBaseException e) {
-            log.error("News don't deleted " + e);
-            request.setAttribute("error", "News don't deleted");
-        }
     }
 }

@@ -1,6 +1,9 @@
 package com.revotech.nsegen.services;
 
-import com.revotech.nsegen.commands.AddNewsCommand;
+/**
+ * Created by Revotech on 13.07.16.
+ */
+
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.Part;

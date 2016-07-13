@@ -20,17 +20,6 @@ public class ViewAllNewsCommand implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<News> news;
-
-        try {
-            news = NewsService.getInstance().getListOfNews();
-            request.setAttribute("newsList", news);
-            request.getRequestDispatcher("/WEB-INF/view/viewallnews.jsp").forward(request, response);
-        } catch (NewsServiceException e) {
-            log.error("View all news command error");
-            request.setAttribute("error", "Error 500");
-            request.getRequestDispatcher("/WEB-INF/view/error.jsp").forward(request, response);
-        }
-
+        NewsService.getInstance().getListOfNews(request, response);
     }
 }

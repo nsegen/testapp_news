@@ -32,7 +32,7 @@
       <module name="dao" target="1.7" />
       <module name="models" target="1.5" />
       <module name="news" target="1.5" />
-      <module name="services" target="1.5" />
+      <module name="services" target="1.7" />
       <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
