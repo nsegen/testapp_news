@@ -19,6 +19,7 @@
             <h3>News Menu</h3>
             <div><a href="controller?action=viewAll">News list</a></div>
             <div>Add news</div>
+            <div><a href="authorization?action=logout">Logout</a></div>
         </div>
         <div class="news-add">
             <form name="AddNewsForm" action="controller" method="post" enctype="multipart/form-data">

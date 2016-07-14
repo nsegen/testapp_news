@@ -29,10 +29,7 @@ public class ImageService {
 
     public static String uploadImage(Part part, String title) throws IOException {
         final String fileName = getFileName(part);
-        String path = "D:\\javaProjects\\testapp_news\\web\\src\\main\\webapp\\images";
-        log.info("____________________________________________________________________________________________________");
-        log.info(path);
-        log.info("____________________________________________________________________________________________________");
+        String path = "images";
         try(OutputStream out = new FileOutputStream(new File(path + File.separator + title + fileName));
             InputStream fileContent = part.getInputStream()) {
 

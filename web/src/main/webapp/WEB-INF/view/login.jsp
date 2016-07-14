@@ -9,9 +9,15 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>login</title>
 </head>
 <body>
-
+    <a href="authorization?action=siguppage">Регистрация</a>
+    <form name="AuthorizationForm" action="authorization" method="post">
+        <p class="author-input">Nickname: <input placeholder="Enter your nickname..." name="nickname"></p>
+        <p class="date-input">Password: <input placeholder="Enter password..." name="password"></p>
+        <input type="hidden" name="action" value="signin"/>
+        <p><input type="submit" value="Отправить"></p>
+    </form>
 </body>
 </html>

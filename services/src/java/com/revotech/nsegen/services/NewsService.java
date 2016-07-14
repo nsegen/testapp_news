@@ -1,5 +1,6 @@
 package com.revotech.nsegen.services;
 
+import com.revotech.nsegen.dao.INewsDAO;
 import com.revotech.nsegen.dao.NewsDAO;
 import com.revotech.nsegen.entities.News;
 import com.revotech.nsegen.exceptions.DAOException;
@@ -20,9 +21,9 @@ import java.util.List;
  */
 public class NewsService implements INewsService{
 
-    private NewsDAO daoService;
+    private INewsDAO daoService;
 
-    private static NewsService newsService;
+    private static INewsService newsService;
 
     private static final Logger log = Logger.getLogger(NewsService.class);
 
@@ -65,7 +66,7 @@ public class NewsService implements INewsService{
         daoService = NewsDAO.getInstance();
     }
 
-    public static NewsService getInstance(){
+    public static INewsService getInstance(){
         if(newsService == null){
             newsService = new NewsService();
         }
@@ -112,11 +113,17 @@ public class NewsService implements INewsService{
             news.setContent(request.getParameter("content"));
         //}
 
+        if (request.getParameter("id") != null) {
+            news.setId(Integer.valueOf(request.getParameter("id")));
+        }
+
         news.setAuthor(request.getParameter("author"));
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date date = null;
         try {
-            date = format.parse(request.getParameter("date"));
+            if(request.getParameter("date") != null) {
+                date = format.parse(request.getParameter("date"));
+            }
         } catch(ParseException e) {
             log.info("Date can't be parsed");
         }

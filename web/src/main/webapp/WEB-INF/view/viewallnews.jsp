@@ -13,6 +13,7 @@
         <h3>News Menu</h3>
         <div>News list</div>
         <div><a href="controller?action=addNewsPage">Add news</a></div>
+        <div><a href="authorization?action=logout">Logout</a></div>
     </div>
     <div class="news-list">
         <c:forEach var="news" items="${newsList}">

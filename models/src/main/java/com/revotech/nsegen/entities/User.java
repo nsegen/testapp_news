@@ -4,11 +4,11 @@ package com.revotech.nsegen.entities;
  * Created by Revotech on 12.07.16.
  */
 public class User {
-    Integer id;
-    String firstName;
-    String lastName;
-    String password;
-    String nickname;
+    private Integer id;
+    private String firstName;
+    private String lastName;
+    private String password;
+    private String nickname;
 
     public User(){
         this.id = null;

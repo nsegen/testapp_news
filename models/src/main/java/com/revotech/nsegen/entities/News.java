@@ -95,4 +95,16 @@ public class News implements Serializable {
         result = 31 * result + date.hashCode();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "News{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", content='" + content + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }

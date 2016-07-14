@@ -1,13 +1,13 @@
 import com.revotech.nsegen.entities.News;
 import com.revotech.nsegen.services.INewsService;
 import com.revotech.nsegen.services.NewsService;
+import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import java.util.Date;
 
 import static org.mockito.Mockito.*;
 
@@ -18,24 +18,19 @@ import static org.junit.Assert.*;
  */
 public class NewsServiceTest {
 
+    private static final Logger log = Logger.getLogger(NewsService.class);
     private HttpServletRequest req;
     private HttpServletResponse resp;
     private News testNews;
 
     private void setReq(){
         req = mock(HttpServletRequest.class);
-        when(req.getParameter())
-    }
+        when(req.getParameter("content")).thenReturn(testNews.getContent());
+        when(req.getParameter("title")).thenReturn(testNews.getTitle());
+        when(req.getParameter("date")).thenReturn("16/04/97");
+        when(req.getParameter("author")).thenReturn(testNews.getAuthor());
+        when(req.getParameter("image")).thenReturn(testNews.getImgUrl());
 
-    @Before
-    public void beforeDo(){
-        resp = mock(HttpServletResponse.class);
-        testNews.setId(1);
-        testNews.setTitle("test news title");
-        testNews.setContent("test news content");
-        testNews.setDate(new Date("16/04/97"));
-        testNews.setAuthor("nsegen");
-        testNews.setImgUrl("image test url");
     }
 
     @Test
