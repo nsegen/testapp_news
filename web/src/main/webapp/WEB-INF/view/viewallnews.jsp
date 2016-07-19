@@ -13,7 +13,7 @@
         <h3>News Menu</h3>
         <div>News list</div>
         <div><a href="controller?action=addNewsPage">Add news</a></div>
-        <div><a href="authorization?action=logout">Logout</a></div>
+        <%--<div><a href="authorization?action=logout">Logout</a></div>--%>
     </div>
     <div class="news-list">
         <c:forEach var="news" items="${newsList}">
@@ -26,12 +26,9 @@
                     <div>${news.content}
                     </div>
                 </div>
-                <form class="deleteButton" action="controller" method="get">
-                    <input type="hidden" value="editNewsPage" name="action">
-                    <input type="hidden" value="${news.id}" name="id">
-                    <input type="submit" value="Edit">
-                </form>
-                <a href=""><button>Edit</button></a>
+
+                <a class="editButton" href="controller?action=editNewsPage&id=${news.id}">Edit</a>
+
                 <form class="deleteButton" action="controller" method="post">
                     <input type="hidden" value="delete" name="action">
                     <input type="hidden" value="${news.id}" name="id">

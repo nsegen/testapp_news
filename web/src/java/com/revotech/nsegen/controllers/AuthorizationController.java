@@ -27,8 +27,6 @@ public class AuthorizationController extends HttpServlet {
     private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 
         String action = req.getParameter("action");
-        log.info(action);
-
 
         Command command = null;
         if (null != action){

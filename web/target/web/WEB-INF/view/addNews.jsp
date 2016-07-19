@@ -19,9 +19,10 @@
             <h3>News Menu</h3>
             <div><a href="controller?action=viewAll">News list</a></div>
             <div>Add news</div>
-            <div><a href="authorization?action=logout">Logout</a></div>
+            <%--<div><a href="authorization?action=logout">Logout</a></div>--%>
         </div>
         <div class="news-add">
+            <h2>${error}</h2>
             <form name="AddNewsForm" action="controller" method="post" enctype="multipart/form-data">
                 <p class="author-input">Author: <input placeholder="Enter your nick name..." name="author"></p>
                 <p class="date-input">Date: <input placeholder="Enter date..." type="date" name="date"></p>

@@ -5,7 +5,7 @@ package com.revotech.nsegen.entities;
  */
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class News implements Serializable {
 
@@ -15,7 +15,7 @@ public class News implements Serializable {
     private String author;
     private String content;
     private String imgUrl;
-    private Date date;
+    private LocalDate date;
 
     public News(){
         this.id = null;
@@ -46,7 +46,7 @@ public class News implements Serializable {
         return imgUrl;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
@@ -70,7 +70,7 @@ public class News implements Serializable {
         this.imgUrl = imgUrl;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

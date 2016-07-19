@@ -15,6 +15,8 @@ public class AddNewsPageCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        log.info(request.getParameter("error"));
+        request.setAttribute("error", request.getParameter("error"));
         request.getRequestDispatcher("/WEB-INF/view/addNews.jsp").forward(request, response);
 
     }

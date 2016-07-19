@@ -13,7 +13,7 @@ public final class NewsQueries {
     public static final String SQL_ADD_NEWS =
             "INSERT " +
             "INTO NIKITASEGEN.NEWS (ID, TITLE, RELEASE_DATE, CONTENT, AUTHOR_id, IMG_URL) " +
-            "VALUES (?, ?, ?, ?, ?, ?)";
+            "VALUES (?, ?, ?, ?, (" + UserQueries.SQL_GET_USER_ID_BY_NICKNAME + ") , ?)";
 
     public static final String SQL_DELETE_NEWS =
             "DELETE FROM NIKITASEGEN.NEWS " +

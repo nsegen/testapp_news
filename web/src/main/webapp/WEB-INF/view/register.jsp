@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Revotech
-  Date: 14.07.16
-  Time: 15:52
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,6 +6,7 @@
 </head>
 <body>
     <a href="authorization?action=signinpage">Вход</a>
+    <h2 class="error">${error}</h2>
     <form name="AuthorizationForm" action="authorization" method="post">
         <p class="author-input">Nickname: <input placeholder="Enter your nickname..." name="nickname"></p>
         <p class="date-input">Password: <input placeholder="Enter password..." name="password"></p>

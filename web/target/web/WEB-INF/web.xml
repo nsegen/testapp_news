@@ -5,32 +5,36 @@
 
   <display-name>Archetype Created Web Application</display-name>
   
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>AuthorizationController</servlet-name>-->
+    <!--<url-pattern>/authorization</url-pattern>-->
+  <!--</servlet-mapping>-->
+
+  <!--<servlet>-->
+    <!--<servlet-name>AuthorizationController</servlet-name>-->
+    <!--<servlet-class>com.revotech.nsegen.controllers.AuthorizationController</servlet-class>-->
+  <!--</servlet>-->
+
+
   <servlet>
     <servlet-name>MainController</servlet-name>
     <servlet-class>com.revotech.nsegen.controllers.MainController</servlet-class>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>AuthorizationController</servlet-name>
-    <url-pattern>/authorization</url-pattern>
-  </servlet-mapping>
 
-  <servlet>
-    <servlet-name>AuthorizationController</servlet-name>
-    <servlet-class>com.revotech.nsegen.controllers.AuthorizationController</servlet-class>
-  </servlet>
   <servlet-mapping>
     <servlet-name>MainController</servlet-name>
     <url-pattern>/controller</url-pattern>
   </servlet-mapping>
 
-  <filter>
-    <filter-name>login</filter-name>
-    <filter-class>com.revotech.nsegen.filters.LoginFilter</filter-class>
-  </filter>
 
-  <filter-mapping>
-    <filter-name>login</filter-name>
-    <url-pattern>/controller</url-pattern>
-  </filter-mapping>
+  <!--<filter>-->
+    <!--<filter-name>login</filter-name>-->
+    <!--<filter-class>com.revotech.nsegen.filters.LoginFilter</filter-class>-->
+  <!--</filter>-->
+
+  <!--<filter-mapping>-->
+    <!--<filter-name>login</filter-name>-->
+    <!--<url-pattern>/controller</url-pattern>-->
+  <!--</filter-mapping>-->
   
 </web-app>

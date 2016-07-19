@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class NewsDAOTest {
         testNews.setAuthor("fgapon");
         testNews.setContent("ололол");
         testNews.setImgUrl("test url");
-        testNews.setDate(new Date("16/04/1997"));
+        testNews.setDate(LocalDate.of(1997, 4 ,16));
     }
 
     @After

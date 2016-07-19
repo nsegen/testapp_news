@@ -37,6 +37,7 @@ public class NewsServiceTest {
     public void getListOfNews() throws Exception {
         INewsService newsService = NewsService.getInstance();
 
+
     }
 
     @Test

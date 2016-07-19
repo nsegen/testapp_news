@@ -78,6 +78,8 @@ public class NewsDAO implements INewsDAO {
             ResultSet rs = st.executeQuery(NewsQueries.SQL_GET_NEWS_ID)){
             if(rs.next()){
                 id = rs.getInt(1);
+            } else {
+                id = 1;
             }
         } catch (PropertyVetoException | IOException | SQLException e){
             log.error("DAO addEntity failed " + e);
@@ -100,12 +102,12 @@ public class NewsDAO implements INewsDAO {
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement prst = connection.prepareStatement(NewsQueries.SQL_ADD_NEWS)) {
 
-            int authorID = UserDAO.getInstance().getUserIdByNickname(news.getAuthor());
+            //int authorID = UserDAO.getInstance().getUserIdByNickname(news.getAuthor());
             prst.setInt(1, id);
             prst.setString(2, news.getTitle());
-            prst.setDate(3, new Date(news.getDate().getTime()));
+            prst.setDate(3, Date.valueOf(news.getDate()));
             prst.setString(4, news.getContent());
-            prst.setInt(5, authorID);
+            prst.setString(5, news.getAuthor());
             prst.setString(6, news.getImgUrl());
             prst.executeUpdate();
 
@@ -201,7 +203,7 @@ public class NewsDAO implements INewsDAO {
         news.setAuthor(resultSet.getString("NICK_NAME"));
         news.setTitle(resultSet.getString("TITLE"));
         news.setContent(resultSet.getString("CONTENT"));
-        news.setDate(resultSet.getDate("RELEASE_DATE"));
+        news.setDate(resultSet.getDate("RELEASE_DATE").toLocalDate());
         news.setImgUrl(resultSet.getString("IMG_URL"));
 
         return news;

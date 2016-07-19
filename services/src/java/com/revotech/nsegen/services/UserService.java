@@ -45,7 +45,8 @@ public class UserService implements IUserService {
             session.setAttribute("nickname", user.getNickname());
             response.sendRedirect("controller?action=viewAll");
         } catch(DAOException e) {
-            request.setAttribute("error", "invalid nickname");
+            request.setAttribute("error", "User with nickname '" + user.getNickname() + "' is exist");
+            request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
         }
 
     }
@@ -56,17 +57,23 @@ public class UserService implements IUserService {
         User user = createUser(request);
         try {
             Integer id = userDAO.getUserIdByNickname(user.getNickname());
-            User tempUser = userDAO.getUserById(id);
-            if(user.getPassword().equals(tempUser.getPassword())){
-                HttpSession session = request.getSession();
-                session.setMaxInactiveInterval(Const.SESSION_LIFETIME);
-                session.setAttribute("nickname", tempUser.getNickname());
-                response.sendRedirect("controller?action=viewAll");
-            } else {
-                request.setAttribute("error", "invalid password");
-            }
+            //if(id != null) {
+                User tempUser = userDAO.getUserById(id);
+                if (user.getPassword().equals(tempUser.getPassword())) {
+                    HttpSession session = request.getSession();
+                    session.setMaxInactiveInterval(Const.SESSION_LIFETIME);
+                    session.setAttribute("nickname", tempUser.getNickname());
+                } else {
+                    request.setAttribute("error", "Wrong password");
+                    request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
+                }
+            /*} else {
+                request.setAttribute("error", "User with nickname '" + user.getNickname() + "' don't exist");
+                //request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
+            }*/
         } catch(DAOException e) {
-            request.setAttribute("error", "invalid nickname");
+            request.setAttribute("error", "User with nickname '" + user.getNickname() + "' don't exist");
+            request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
         }
 
     }
