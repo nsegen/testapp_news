@@ -83,17 +83,21 @@ public class NewsDAOTest {
         NewsDAO newsDAO = NewsDAO.getInstance();
         Integer id = newsDAO.addEntity(testNews);
         testNews.setId(id);
-        testNews.setTitle("Change");
-        testNews.setContent("ololo");
-        testNews.setContent("rapapa");
-        newsDAO.updateEntity(testNews);
+        News newNews = new News();
+        newNews.setId(testNews.getId());
+        newNews.setContent("jbvjdksbvndlkjn");
+        newNews.setImgUrl("kjghflsdg");
+        newNews.setAuthor("nsegen");
+        newNews.setDate(testNews.getDate());
+        newNews.setTitle("dfsasdf");
+        newsDAO.updateEntity(newNews, testNews);
         expectedNews = newsDAO.getNewsById(id);
-        Assert.assertEquals("update news failed: id mismatch", testNews.getId(), expectedNews.getId());
-        Assert.assertEquals("update news failed: title mismatch", testNews.getTitle(), expectedNews.getTitle().trim());
-        Assert.assertEquals("update news failed: content mismatch", testNews.getContent(), expectedNews.getContent());
-        Assert.assertEquals("update news failed: date mismatch", testNews.getDate(), expectedNews.getDate());
-        Assert.assertEquals("update news failed: author mismatch", testNews.getAuthor(), expectedNews.getAuthor());
-        Assert.assertEquals("update news failed: img url mismatch", testNews.getImgUrl(), expectedNews.getImgUrl());
+        Assert.assertEquals("update news failed: id mismatch", newNews.getId(), expectedNews.getId());
+        Assert.assertEquals("update news failed: title mismatch", newNews.getTitle(), expectedNews.getTitle().trim());
+        Assert.assertEquals("update news failed: content mismatch", newNews.getContent(), expectedNews.getContent());
+        Assert.assertEquals("update news failed: date mismatch", newNews.getDate(), expectedNews.getDate());
+        Assert.assertEquals("update news failed: author mismatch", newNews.getAuthor(), expectedNews.getAuthor());
+        Assert.assertEquals("update news failed: img url mismatch", newNews.getImgUrl(), expectedNews.getImgUrl());
 
     }
 

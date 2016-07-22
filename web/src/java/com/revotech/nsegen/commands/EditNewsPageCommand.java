@@ -15,10 +15,15 @@ public class EditNewsPageCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Integer id = Integer.parseInt(request.getParameter("id"));
-        //News news = newsServise.getNewsById(id);
-        request.setAttribute("id", request.getParameter("id"));
-        request.getRequestDispatcher("/WEB-INF/view/editNews.jsp").forward(request, response);
+        try {
+            Integer id = Integer.parseInt(request.getParameter("id"));
+            request.setAttribute("id", request.getParameter("id"));
+            request.setAttribute("nextAction", "editNews");
+            request.getRequestDispatcher("/WEB-INF/view/addNews.jsp").forward(request, response);
+        } catch(NumberFormatException e) {
+            request.setAttribute("error", "Error 404: page not found");
+            request.getRequestDispatcher("/WEB-INF/view/error.jsp").forward(request, response);
+        }
 
     }
 }

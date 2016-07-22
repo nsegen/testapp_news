@@ -6,8 +6,11 @@ package com.revotech.nsegen.services;
 
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
 import java.io.*;
+import java.rmi.server.ServerCloneException;
 import java.util.Arrays;
 
 /**
@@ -21,13 +24,17 @@ public class ImageService {
         for (String content : part.getHeader("content-disposition").split(";")) {
             if (content.trim().startsWith("filename")) {
                 return content.substring(
-                        content.indexOf('=') + 1).trim().replace("\"", "");
+                        content.indexOf('=') + 1).trim().replace("\"", "").replace(" ", "");
             }
         }
         return null;
     }
 
-    public static String uploadImage(Part part, String title) throws IOException {
+    public static String uploadImage(HttpServletRequest request, String title) throws IOException, ServletException {
+        Part part = request.getPart("image");
+        if(part.getSubmittedFileName().isEmpty()){
+            return null;
+        }
         final String fileName = getFileName(part);
         String path = "images";
         try(OutputStream out = new FileOutputStream(new File(path + File.separator + title + fileName));
@@ -45,6 +52,6 @@ public class ImageService {
                     Arrays.toString(new Object[]{fne.getMessage()}));
         }
 
-        return path + File.separator + fileName;
+        return "http://localhost:8083/" + path + File.separator + title + fileName;
     }
 }

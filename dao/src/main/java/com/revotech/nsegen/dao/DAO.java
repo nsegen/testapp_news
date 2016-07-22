@@ -14,5 +14,5 @@ public interface DAO<T> {
     Integer addEntity(T entity) throws DAOException;
     List<T> getEntities() throws DAOException;
     int deleteEntity(int id) throws DAOException;
-    int updateEntity(T entity) throws DAOException;
+    int updateEntity(T entityNew, T entityOld) throws DAOException;
 }

@@ -1,7 +1,5 @@
 package com.revotech.nsegen.commands;
 
-import com.revotech.nsegen.exceptions.NewsServiceException;
-import com.revotech.nsegen.exceptions.NotChangeDataBaseException;
 import com.revotech.nsegen.services.NewsService;
 import org.apache.log4j.Logger;
 

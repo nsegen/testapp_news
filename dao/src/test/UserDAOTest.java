@@ -68,7 +68,7 @@ public class UserDAOTest {
         testUser.setFirstName("Change");
         testUser.setLastName("ololo");
         testUser.setPassword("rapapa");
-        userDAO.updateEntity(testUser);
+        userDAO.updateEntity(testUser, testUser);
         expectedUser = userDAO.getUserById(id);
         Assert.assertEquals("add news failed: id mismatch", testUser.getId(), expectedUser.getId());
         Assert.assertEquals("add news failed: first name mismatch", testUser.getFirstName(), expectedUser.getFirstName());

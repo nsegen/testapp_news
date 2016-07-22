@@ -195,19 +195,19 @@ public class UserDAO implements IUserDAO {
 
     /**
      * Update record in table USERS in database
-     * @param user User which need to update
+     * @param userNew User which need to update
      * @return int Amount of changing row in database
      * @throws DAOException
      */
     @Override
-    public int updateEntity(User user) throws DAOException {
+    public int updateEntity(User userNew, User userOld) throws DAOException {
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement prst = connection.prepareStatement(UserQueries.SQL_UPDATE_USER)) {
 
-            prst.setString(1, user.getFirstName());
-            prst.setString(2, user.getLastName());
-            prst.setString(3, user.getPassword());
-            prst.setInt(4, user.getId());
+            prst.setString(1, userNew.getFirstName());
+            prst.setString(2, userNew.getLastName());
+            prst.setString(3, userNew.getPassword());
+            prst.setInt(4, userNew.getId());
 
             return prst.executeUpdate();
 

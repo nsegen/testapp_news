@@ -7,6 +7,7 @@ import com.revotech.nsegen.exceptions.DAOException;
 import org.apache.log4j.Logger;
 
 import java.beans.PropertyVetoException;
+import java.io.File;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -105,7 +106,11 @@ public class NewsDAO implements INewsDAO {
             //int authorID = UserDAO.getInstance().getUserIdByNickname(news.getAuthor());
             prst.setInt(1, id);
             prst.setString(2, news.getTitle());
-            prst.setDate(3, Date.valueOf(news.getDate()));
+            Date date = null;
+            if(news.getDate() != null){
+                date = Date.valueOf(news.getDate());
+            }
+            prst.setDate(3, date);
             prst.setString(4, news.getContent());
             prst.setString(5, news.getAuthor());
             prst.setString(6, news.getImgUrl());
@@ -167,19 +172,21 @@ public class NewsDAO implements INewsDAO {
 
     /**
      * Update record in table News in database
-     * @param news News which need to update
+     * @param news1 News which need to update
      * @return int Amount of changing row in database
      * @throws DAOException
      */
-    public int updateEntity(News news) throws DAOException {
+    public int updateEntity(News news1, News news2) throws DAOException {
 
         try(Connection connection = DataSource.getInstance().getConnection();
             PreparedStatement prst = connection.prepareStatement(NewsQueries.SQL_UPDATE_NEWS)) {
 
-            prst.setString(1, news.getTitle());
-            prst.setString(2, news.getContent());
-            prst.setString(3, news.getImgUrl());
-            prst.setInt(4, news.getId());
+            prst.setString(1, (news1.getTitle() != null) ? news1.getTitle() : news2.getTitle());
+            prst.setDate(2, Date.valueOf((news1.getDate() != null) ? news1.getDate() : news2.getDate()));
+            prst.setString(3, (news1.getContent() != null) ? news1.getContent() : news2.getContent());
+            prst.setString(4, (news1.getAuthor() != null) ? news1.getAuthor() : news2.getAuthor());
+            prst.setString(5, (news1.getImgUrl() != null) ? news1.getImgUrl() : news2.getImgUrl());
+            prst.setInt(6, news1.getId());
 
             return prst.executeUpdate();
 

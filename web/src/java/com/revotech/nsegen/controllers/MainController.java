@@ -8,6 +8,7 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -38,6 +39,7 @@ public class MainController extends HttpServlet {
                 case "addNews": command = new AddNewsCommand(); break;
                 case "editNewsPage": command = new EditNewsPageCommand(); break;
                 case "editNews": command = new EditNewsCommand(); break;
+                case "viewNews": command = new ViewNewsCommand(); break;
                 default: command = new ErrorPageCommand(); break;
             }
 

@@ -17,6 +17,7 @@ public class AddNewsPageCommand implements Command {
 
         log.info(request.getParameter("error"));
         request.setAttribute("error", request.getParameter("error"));
+        request.setAttribute("nextAction", "addNews");
         request.getRequestDispatcher("/WEB-INF/view/addNews.jsp").forward(request, response);
 
     }
