@@ -96,21 +96,23 @@ public class NewsService implements INewsService{
             String notDeleted = "";
             String ids[] = request.getParameterValues("ids");
 
-            for(String i : ids) {
+            if(ids != null) {
+                for (String i : ids) {
 
-                Integer id = Integer.valueOf(i);
+                    Integer id = Integer.valueOf(i);
 
-                News news = daoService.getNewsById(id);
-                StringBuffer imgUrl = new StringBuffer(news.getImgUrl());
-                int start = news.getImgUrl().indexOf("http://localhost:8083/");
-                imgUrl.delete(start, "http://localhost:8083/".length());
-                File newsImage = new File(imgUrl.toString());
-                if (!newsImage.delete()) {
-                    log.warn("image '" + newsImage.getAbsolutePath() + "' don't deleted");
-                }
+                    News news = daoService.getNewsById(id);
+                    StringBuffer imgUrl = new StringBuffer(news.getImgUrl());
+                    int start = news.getImgUrl().indexOf("http://localhost:8083/");
+                    imgUrl.delete(start, "http://localhost:8083/".length());
+                    File newsImage = new File(imgUrl.toString());
+                    if (!newsImage.delete()) {
+                        log.warn("image '" + newsImage.getAbsolutePath() + "' don't deleted");
+                    }
 
-                if (daoService.deleteEntity(id) == 0){
-                    notDeleted += id + ", ";
+                    if (daoService.deleteEntity(id) == 0) {
+                        notDeleted += id + ", ";
+                    }
                 }
             }
 

@@ -10,7 +10,6 @@ import org.apache.log4j.Logger;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * Class {@code LocaleFilter} is the class, that implements {@code Filter} interface to

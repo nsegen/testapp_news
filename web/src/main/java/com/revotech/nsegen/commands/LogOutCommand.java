@@ -1,7 +1,5 @@
 package com.revotech.nsegen.commands;
 
-import com.revotech.nsegen.services.IUserService;
-import com.revotech.nsegen.services.UserService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
