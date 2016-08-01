@@ -5,52 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f5335ca-dac6-41fc-9cfc-c8574eb32bb0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/script.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dao/dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/models.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/news.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/services/services.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/com/revotech/nsegen/dao/NewsDAO.class" afterPath="$PROJECT_DIR$/dao/target/classes/com/revotech/nsegen/dao/NewsDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/com/revotech/nsegen/datasource/DataSource.class" afterPath="$PROJECT_DIR$/dao/target/classes/com/revotech/nsegen/datasource/DataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/target/classes/com/revotech/nsegen/entities/News.class" afterPath="$PROJECT_DIR$/models/target/classes/com/revotech/nsegen/entities/News.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/com/revotech/nsegen/services/NewsService.class" afterPath="$PROJECT_DIR$/services/target/classes/com/revotech/nsegen/services/NewsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/classes/com/revotech/nsegen/controllers/MainController.class" afterPath="$PROJECT_DIR$/web/target/classes/com/revotech/nsegen/controllers/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/com/revotech/nsegen/controllers/MainController.class" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/com/revotech/nsegen/controllers/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/classes/com/revotech/nsegen/commands/EditNewsPageCommand.class" afterPath="$PROJECT_DIR$/web/target/classes/com/revotech/nsegen/commands/EditNewsPageCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/com/revotech/nsegen/commands/EditNewsPageCommand.class" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/com/revotech/nsegen/commands/EditNewsPageCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/dao-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/dao-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/models-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/models-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/services-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/services-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/NewsService.java" afterPath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/NewsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/NewsDAO.java" afterPath="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/NewsDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/UserDAO.java" afterPath="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/UserDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/datasource/DataSource.java" afterPath="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/datasource/DataSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/dao/src/main/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/dao/target/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/src/main/java/com/revotech/nsegen/entities/News.java" afterPath="$PROJECT_DIR$/models/src/main/java/com/revotech/nsegen/entities/News.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/src/test/NewsServiceTest.java" afterPath="$PROJECT_DIR$/services/src/test/NewsServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/services/target/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsPageCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsPageCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewNewsCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewNewsCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/addNews.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/addNews.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewNews.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewNews.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewallnews.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewallnews.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/css/newslist.css" afterPath="$PROJECT_DIR$/web/src/main/webapp/css/newslist.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/resources/label_en.properties" afterPath="$PROJECT_DIR$/web/src/resources/label_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/resources/label_ru.properties" afterPath="$PROJECT_DIR$/web/src/resources/label_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/resources/log4j.properties" afterPath="$PROJECT_DIR$/web/src/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/web/target/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/view/addNews.jsp" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/view/addNews.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/view/viewallnews.jsp" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/view/viewallnews.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/css/newslist.css" afterPath="$PROJECT_DIR$/web/target/web/css/newslist.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/AddNewsCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/AddNewsCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/AddNewsPageCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/AddNewsPageCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/Command.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/Command.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/DeleteNewsCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/DeleteNewsCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/EditNewsCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/EditNewsPageCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsPageCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/ErrorPageCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ErrorPageCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/LogOutCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/LogOutCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignInCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/SignInCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignInPageCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/SignInPageCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignUpCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/SignUpCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignUpPageCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/SignUpPageCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/ViewAllNewsCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewAllNewsCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/ViewNewsCommand.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewNewsCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/constants/Locales.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/constants/Locales.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/controllers/AuthorizationController.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/controllers/AuthorizationController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/controllers/MainController.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/controllers/MainController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/filters/LocaleFilter.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/filters/LocaleFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/filters/LoginFilter.java" afterPath="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/filters/LoginFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/index.jsp" afterPath="$PROJECT_DIR$/web/target/web/index.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/constants/Const.java" afterPath="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/constants/Const.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/exceptions/NewsServiceException.java" afterPath="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/exceptions/NewsServiceException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/exceptions/NotChangeDataBaseException.java" afterPath="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/exceptions/NotChangeDataBaseException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/INewsService.java" afterPath="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/INewsService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/IUserService.java" afterPath="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/IUserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/ImageService.java" afterPath="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/ImageService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/NewsService.java" afterPath="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/NewsService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/UserService.java" afterPath="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/UserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/src/resources/log4j.properties" afterPath="$PROJECT_DIR$/services/src/main/resources/log4j.properties" />
     </list>
     <ignored path="news.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,21 +73,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewAllNewsCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewAllNewsCommand.java">
+      <file leaf-file-name="viewNews.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewNews.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+            <state relative-caret-position="595">
+              <caret line="83" column="77" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNewsCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/AddNewsCommand.java">
+      <file leaf-file-name="addNews.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/addNews.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="544">
+              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocaleFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/filters/LocaleFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/NewsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,53 +115,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewNews.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewNews.jsp">
+      <file leaf-file-name="INewsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/INewsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+            <state relative-caret-position="289">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addNews.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/addNews.jsp">
+      <file leaf-file-name="EditNewsPageCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsPageCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="391">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
               <folding>
-                <element signature="e#0#43#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewallnews.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewallnews.jsp">
+      <file leaf-file-name="ViewNewsCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewNewsCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newslist.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/css/newslist.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="289">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -176,57 +172,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/services/src/test/com/revotech/nsegen/services/NewsServiceTest.java" />
-        <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/IUserService.java" />
-        <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/filters/LoginFilter.java" />
-        <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignInCommand.java" />
-        <option value="$PROJECT_DIR$/models/src/main/java/com/revotech/nsegen/entities/User.java" />
-        <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/LogOutCommand.java" />
-        <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/constants/Const.java" />
-        <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/constants/Const.java" />
-        <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignUpPage.java" />
-        <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignInPageCommand.java" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignUpCommand.java" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/register.jsp" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/controllers/AuthorizationController.java" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/login.jsp" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/SignUpPageCommand.java" />
-        <option value="$PROJECT_DIR$/models/src/main/java/com/revotech/nsegen/entities/News.java" />
         <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/UserService.java" />
         <option value="$PROJECT_DIR$/dao/src/test/com/revotech/nsegen/dao/NewsDAOTest.java" />
         <option value="$PROJECT_DIR$/services/src/test/NewsServiceTest.java" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/ViewAllNewsCommand.java" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/AddNewsCommand.java" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/index.html" />
-        <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/INewsService.java" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/ViewNewsCommand.java" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/DeleteNewsCommand.java" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/AddNewsPageCommand.java" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/commands/EditNewsPageCommand.java" />
         <option value="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/DAO.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/dao/src/test/UserDAOTest.java" />
         <option value="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/constants/NewsQueries.java" />
         <option value="$PROJECT_DIR$/dao/src/test/NewsDAOTest.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/NewsDAO.java" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/editNews.jsp" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/constants/Locales.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/src/java/com/revotech/nsegen/filters/LocaleFilter.java" />
-        <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/ImageService.java" />
-        <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/NewsService.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewAllNewsCommand.java" />
         <option value="$PROJECT_DIR$/web/pom.xml" />
         <option value="$PROJECT_DIR$/web/src/resources/label_ru.properties" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/js/script.js" />
-        <option value="$PROJECT_DIR$/web/src/resources/label_en.properties" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewNews.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewallnews.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/addNews.jsp" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/css/newslist.css" />
+        <option value="$PROJECT_DIR$/services/pom.xml" />
+        <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/ImageService.java" />
+        <option value="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/datasource/DataSource.java" />
+        <option value="$PROJECT_DIR$/web/src/resources/label_en.properties" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/NewsDAO.java" />
+        <option value="$PROJECT_DIR$/models/src/main/java/com/revotech/nsegen/entities/News.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewallnews.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewNews.jsp" />
+        <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/NewsService.java" />
+        <option value="$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/INewsService.java" />
+        <option value="$PROJECT_DIR$/services/src/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/services/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/web/src/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/dao/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewNewsCommand.java" />
+        <option value="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/INewsService.java" />
+        <option value="$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/NewsService.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsPageCommand.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/addNews.jsp" />
       </list>
     </option>
   </component>
@@ -281,6 +277,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,36 +327,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testapp_news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resource Bundle 'label'" />
-              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -409,11 +376,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,27 +390,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,23 +404,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,7 +422,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -500,18 +431,47 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testapp_news" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nsegen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="project.propGUI" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/facultative-mavenOnly" />
@@ -523,6 +483,8 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/dao/src/test" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="prop_add_unversioned_files" value="true" />
+    <property name="js-jscs-nodeInterpreter" value="D:\node\node.exe" />
+    <property name="SearchEverywhereHistoryKey" value="ma&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -533,23 +495,24 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaProjects\testapp_news\services\src\main" />
+      <recent name="D:\javaProjects\testapp_news\services\src" />
+      <recent name="D:\javaProjects\testapp_news\web\src\main" />
+      <recent name="D:\javaProjects\testapp_news\web\src\java" />
+      <recent name="D:\javaProjects\testapp_news\dao\src\test" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.revotech.nsegen.controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\javaProjects\testapp_news\web\src\java\com\revotech\nsegen\commands" />
       <recent name="D:\javaProjects\testapp_news\web\src\main\webapp" />
       <recent name="D:\javaProjects\testapp_news\web\src" />
       <recent name="D:\javaProjects\testapp_news\services\src" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.revotech.nsegen.controllers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\javaProjects\testapp_news\web\src\main" />
-      <recent name="D:\javaProjects\testapp_news\web\src\java" />
-      <recent name="D:\javaProjects\testapp_news\dao\src\test" />
-      <recent name="D:\javaProjects\testapp_news\web\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunManager" selected="JBoss Server.Unnamed">
@@ -1147,7 +1110,13 @@
       <workItem from="1469174422916" duration="17089000" />
       <workItem from="1469434067073" duration="6940000" />
       <workItem from="1469441638782" duration="122000" />
-      <workItem from="1469441849714" duration="14053000" />
+      <workItem from="1469441849714" duration="14122000" />
+      <workItem from="1469516997648" duration="5201000" />
+      <workItem from="1469528684235" duration="958000" />
+      <workItem from="1469529781839" duration="434000" />
+      <workItem from="1469781509964" duration="2735000" />
+      <workItem from="1469785577662" duration="447000" />
+      <workItem from="1470038520536" duration="15841000" />
     </task>
     <servers />
   </component>
@@ -1184,10 +1153,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197410000" />
+    <option name="totallyTimeSpent" value="223095000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1198,9 +1167,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26321355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26321355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-6" y="364" width="1932" height="288" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1211,7 +1180,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36619717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36575052" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1236,7 +1205,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="37" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1245,185 +1214,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/test/com/revotech/nsegen/dao/NewsDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/src/main/java/com/revotech/nsegen/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/constants/UserQueries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/test/NewsServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/java/com/revotech/nsegen/exceptions/NotChangeDataBaseException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/index.html" />
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ErrorPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="18" column="91" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewNewsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/INewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="116" selection-start-line="23" selection-start-column="116" selection-end-line="23" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/AddNewsPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="93" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/DeleteNewsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/INewsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/test/UserDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/constants/NewsQueries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/test/NewsDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/resources/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/NewsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/label_en.properties" />
-    <entry file="file://E:/login.jsp" />
-    <entry file="file://$PROJECT_DIR$/news.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/constants/Locales.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1435,26 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="16" column="0" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/filters/LocaleFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/ImageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1479,23 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/java/com/revotech/nsegen/services/NewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="197" column="21" selection-start-line="197" selection-start-column="21" selection-end-line="197" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1503,23 +1256,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1527,89 +1263,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewAllNewsCommand.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/AddNewsPageCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/AddNewsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/resources/label_ru.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/editNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/resources/label_en.properties">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewallnews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/addNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="18" column="69" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -1617,6 +1277,353 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/constants/UserQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/INewsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/datasource/DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/ImageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="37" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/resources/label_ru.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/exceptions/DAOException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/constants/NewsQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/src/main/java/com/revotech/nsegen/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/editNews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/resources/label_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewAllNewsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/revotech/nsegen/dao/NewsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="167" column="46" selection-start-line="167" selection-start-column="46" selection-end-line="167" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/DeleteNewsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewallnews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="71" column="104" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/AddNewsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="39" column="175" selection-start-line="39" selection-start-column="175" selection-end-line="39" selection-end-column="175" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/src/main/java/com/revotech/nsegen/entities/News.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/INewsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/ViewNewsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/viewNews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="83" column="77" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/filters/LocaleFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/src/main/java/com/revotech/nsegen/services/NewsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/com/revotech/nsegen/commands/EditNewsPageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/addNews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
           <folding />
         </state>
       </provider>

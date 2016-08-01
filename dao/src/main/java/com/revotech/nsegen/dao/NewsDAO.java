@@ -165,7 +165,7 @@ public class NewsDAO implements INewsDAO {
 
         } catch(PropertyVetoException | SQLException | IOException e) {
             log.error("DAO deleteEntity failed " + e);
-            throw new DAOException("DAO deleteEntity failed " + e);
+            throw new DAOException("notdeleted" + e);
         }
 
     }

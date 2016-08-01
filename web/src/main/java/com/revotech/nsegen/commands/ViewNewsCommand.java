@@ -17,7 +17,7 @@ public class ViewNewsCommand implements Command{
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        NewsService.getInstance().getNewsById(request, response);
+        NewsService.getInstance().viewNewsById(request, response);
 
     }
 }

@@ -34,6 +34,9 @@
                                     <fmt:message key="label.english" bundle="${lang}"/>
                                 </a>
                             </li>
+                            <li>
+                                ${sessionScope.get("action")}
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -61,7 +64,7 @@
 
                 </div>
 
-                <div class="news-add col-lg-9 col-md-9 row">
+                <div class="news-add col-lg-5 col-md-5 col-lg-offset-2 col-md-offset-2 row">
                     <c:if test="${not empty error}" >
                         <h2 class="bg-danger">
                             <fmt:message key="error.${error}" bundle="${lang}"/>
@@ -71,31 +74,38 @@
 
                         <div class="form-group">
                             <label for="inputAuthor"><fmt:message key="label.author" bundle="${lang}"/>:</label>
-                            <input type="text" name="author" placeholder="<fmt:message key="input.enternickname" bundle="${lang}"/>" class="form-control" id="inputAuthor">
+                            <input type="text" name="author" placeholder="<fmt:message key="input.enternickname" bundle="${lang}"/>"
+                                   value="${oldNews.author}" class="form-control" id="inputAuthor">
                         </div>
 
                         <div class="form-group">
                             <label for="inputDate"><fmt:message key="label.date" bundle="${lang}"/>:</label>
-                            <input type="date" name="date" class="form-control" id="inputDate">
+                            <input type="date" name="date" value="${oldNews.date}" class="form-control" id="inputDate">
                         </div>
 
                         <div class="form-group">
                             <label for="inputTitle"><fmt:message key="label.title" bundle="${lang}"/>:</label>
-                            <input type="text" name="title" placeholder="<fmt:message key="input.entertitle" bundle="${lang}"/>" class="form-control" id="inputTitle">
+                            <input type="text" name="title" placeholder="<fmt:message key="input.entertitle" bundle="${lang}"/>"
+                                   value="${oldNews.title}" class="form-control" id="inputTitle">
                         </div>
 
                         <div class="form-group">
                             <label for="inputContent"><fmt:message key="label.content" bundle="${lang}"/>:</label>
-                            <input type="text" name="content" placeholder="<fmt:message key="input.entercontent" bundle="${lang}"/>" class="form-control" id="inputContent">
+                            <textarea class="form-control" rows="10" placeholder="<fmt:message key="input.entercontent" bundle="${lang}"/>"
+                                     name="content" id="inputContent"><c:out value="${oldNews.content}" escapeXml="true"/></textarea>
                         </div>
 
                         <div class="image-input">
                             <label for="inputImage"><fmt:message key="label.image" bundle="${lang}"/>:</label>
-                            <input type="file" class="btn btn-default" name="image" title="<fmt:message key="input.enterimage" bundle="${lang}"/>" id="inputImage">
+                            <input type="file" class="btn btn-default"
+                                   value="${oldNews.imgUrl}" name="image" title="<fmt:message key="input.enterimage" bundle="${lang}"/>" id="inputImage">
+                            <div>
+                                <img src="${oldNews.imgUrl}"/>
+                            </div>
                         </div>
 
-                        <div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3">
-                            <div class="row">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3">
                                 <input type="hidden" name="id" value="${id}"/>
                                 <input type="hidden" name="action" value="${nextAction}"/>
                                 <input class="col-md-6 col-lg-6 btn btn-default" type="submit" value="<fmt:message key="label.save" bundle="${lang}"/>">

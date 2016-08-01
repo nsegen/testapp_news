@@ -21,6 +21,8 @@ public interface INewsService {
 
     void addNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
 
-    News getNewsById(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
+    News getNewsById(Integer id);
+
+    void viewNewsById(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
 
 }

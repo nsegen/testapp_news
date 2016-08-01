@@ -5,7 +5,10 @@ package com.revotech.nsegen.entities;
  */
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 
 public class News implements Serializable {
 
@@ -47,6 +50,12 @@ public class News implements Serializable {
     }
 
     public LocalDate getDate() {
+        return date;
+    }
+
+    public Date getUtilDate() {
+        Instant instant = Instant.from(this.date.atStartOfDay(ZoneId.of("GMT")));
+        Date date = Date.from(instant);
         return date;
     }
 

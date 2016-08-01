@@ -26,6 +26,7 @@ public class UserDAO implements IUserDAO {
      * constructor is private, because this class is a singleton
      */
     private UserDAO(){
+
         Locale.setDefault(Locale.ENGLISH);
     }
 

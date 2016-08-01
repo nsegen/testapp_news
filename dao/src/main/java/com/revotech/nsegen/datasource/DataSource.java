@@ -35,10 +35,8 @@ public class DataSource {
   public static DataSource getInstance() throws IOException, SQLException, PropertyVetoException {
     if (datasource == null) {
       datasource = new DataSource();
-      return datasource;
-    } else {
-      return datasource;
     }
+    return datasource;
   }
 
   public Connection getConnection() throws SQLException {

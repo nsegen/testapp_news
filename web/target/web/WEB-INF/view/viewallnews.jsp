@@ -1,3 +1,4 @@
+<%@ page import="java.time.Instant" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -65,19 +66,19 @@
                         <c:forEach var="news" items="${newsList}">
                             <div class="item row">
                                 <div class="col-lg-10 col-md-10">
-                                    <h2 class="row">${news.title}</h2>
+                                    <h2 class="row"><c:out value="${news.title}" escapeXml="true"/></h2>
                                     <div class="row">
                                         <span class="date">
-                                            <c:out value="${news.date}"/>
+                                            <fmt:formatDate type="date" value="${news.getUtilDate()}" />
                                         </span>
-                                        <span class="author">${news.author}</span>
+                                        <span class="author"><c:out value="${news.author}" escapeXml="true"/></span>
                                     </div>
                                     <div class="item-content row">
                                         <div class="newsImg col-md-3 col-lg-3">
-                                            <img src="${news.imgUrl}" class="img-rounded">
+                                            <img src="<c:out value="${news.imgUrl}" escapeXml="true"/>" class="img-rounded">
                                         </div>
                                         <div class="newsContent col-md-8 col-lg-8 col-md-offset-1 col-lg-offset-1">
-                                            <div>${news.content}</div>
+                                            <div><c:out value="${news.content}" escapeXml="true"/></div>
                                         </div>
                                     </div>
                                 </div>

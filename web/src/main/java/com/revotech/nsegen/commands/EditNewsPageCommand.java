@@ -1,5 +1,7 @@
 package com.revotech.nsegen.commands;
 
+import com.revotech.nsegen.entities.News;
+import com.revotech.nsegen.services.NewsService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -18,6 +20,9 @@ public class EditNewsPageCommand implements Command {
         try {
             Integer id = Integer.parseInt(request.getParameter("id"));
             request.setAttribute("id", request.getParameter("id"));
+            News news = NewsService.getInstance().getNewsById(id);
+            request.setAttribute("oldNews", news);
+            request.setAttribute("error", request.getParameter("error"));
             request.setAttribute("nextAction", "editNews");
             request.getRequestDispatcher("/WEB-INF/view/addNews.jsp").forward(request, response);
         } catch(NumberFormatException e) {

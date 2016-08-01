@@ -62,23 +62,31 @@
                 <div class="news-view col-lg-9 col-md-9 row">
                     <div class="author row">
                         <div class="col-lg-2 col-md-2"><fmt:message key="label.author" bundle="${lang}"/>:</div>
-                        <div class="col-lg-10 col-md-10">${news.author}</div>
+                        <div class="col-lg-10 col-md-10">
+                            <c:out value="${news.author}" escapeXml="true"/>
+                        </div>
                     </div>
                     <div class="date row">
                         <div class="col-lg-2 col-md-2"><fmt:message key="label.date" bundle="${lang}"/>:</div>
-                        <div class="col-lg-10 col-md-10">${news.date}</div>
+                        <div class="col-lg-10 col-md-10">
+                            <fmt:formatDate type="date" value="${news.getUtilDate()}" />
+                        </div>
                     </div>
                     <div class="title row">
                         <div class="col-lg-2 col-md-2"><fmt:message key="label.title" bundle="${lang}"/>:</div>
-                        <div class="col-lg-10 col-md-10">${news.title}</div>
+                        <div class="col-lg-10 col-md-10">
+                            <c:out value="${news.title}" escapeXml="true"/>
+                        </div>
                     </div>
                     <div class="content row">
                         <div class="col-lg-2 col-md-2"><fmt:message key="label.content" bundle="${lang}"/>:</div>
-                        <div class="col-lg-10 col-md-10">${news.content}</div>
+                        <div class="col-lg-10 col-md-10">
+                            <c:out value="${news.content}" escapeXml="true"/>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-2 col-md-2"><fmt:message key="label.image" bundle="${lang}"/>:</div>
-                        <div class="col-lg-10 col-md-10 newsImg"><img class="img-rounded" src="${news.imgUrl}"></div>
+                        <div class="col-lg-10 col-md-10 newsImg"><img class="img-rounded" src="<c:out value="${news.imgUrl}" escapeXml="true"/>"></div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3">
                         <div class="row">

@@ -42,7 +42,7 @@ public class NewsService implements INewsService{
         return news;
     }
 
-    public News getNewsById(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    public void viewNewsById(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         News news = null;
 
         try {
@@ -54,6 +54,17 @@ public class NewsService implements INewsService{
             request.setAttribute("error", "Error 404: page not found");
             request.getRequestDispatcher("/WEB-INF/view/error.jsp").forward(request, response);
         }
+    }
+
+    public News getNewsById(Integer id){
+        News news = null;
+
+        try {
+            news = daoService.getNewsById(id);
+        } catch(NumberFormatException | DAOException e) {
+            log.info("News don't fined");
+        }
+
         return news;
     }
 
@@ -74,7 +85,7 @@ public class NewsService implements INewsService{
 
         } catch (DAOException | IOException e) {
             log.error("NewsService editNews failed " + e);
-            request.setAttribute("error", "notedited");
+            response.sendRedirect("controller?action=editNewsPage&id=" + news.getId() + "&error=notedited");
         }
 
     }

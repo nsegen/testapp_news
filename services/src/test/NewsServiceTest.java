@@ -2,16 +2,12 @@ import com.revotech.nsegen.entities.News;
 import com.revotech.nsegen.services.INewsService;
 import com.revotech.nsegen.services.NewsService;
 import org.apache.log4j.Logger;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import static org.mockito.Mockito.*;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Revotech on 13.07.16.

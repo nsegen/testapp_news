@@ -10,7 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
 import java.io.*;
-import java.rmi.server.ServerCloneException;
 import java.util.Arrays;
 
 /**
@@ -32,6 +31,7 @@ public class ImageService {
 
     public static String uploadImage(HttpServletRequest request, String title) throws IOException, ServletException {
         Part part = request.getPart("image");
+        //log.info(MainController.class.getName());
         if(part.getSubmittedFileName().isEmpty()){
             return null;
         }
