@@ -21,7 +21,7 @@ public class EditNewsPageCommand implements Command {
             Integer id = Integer.parseInt(request.getParameter("id"));
             request.setAttribute("id", request.getParameter("id"));
             News news = NewsService.getInstance().getNewsById(id);
-            request.setAttribute("oldNews", news);
+            request.setAttribute("news", news);
             request.setAttribute("error", request.getParameter("error"));
             request.setAttribute("nextAction", "editNews");
             request.getRequestDispatcher("/WEB-INF/view/addNews.jsp").forward(request, response);

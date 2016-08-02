@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
 import java.io.*;
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
 /**
  * Created by Revotech on 07.07.16.
@@ -52,6 +53,6 @@ public class ImageService {
                     Arrays.toString(new Object[]{fne.getMessage()}));
         }
 
-        return "http://localhost:8083/" + path + File.separator + title + fileName;
+        return ResourceBundle.getBundle("ImageServer").getString("url") + "/" + path + "/" + title + fileName;
     }
 }

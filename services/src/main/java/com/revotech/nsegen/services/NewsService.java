@@ -6,6 +6,7 @@ import com.revotech.nsegen.entities.News;
 import com.revotech.nsegen.exceptions.DAOException;
 import org.apache.log4j.Logger;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -141,20 +142,22 @@ public class NewsService implements INewsService{
     }
     public void addNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
-        News news = null;
+        News news = createNews(request);
 
         try{
-            news = createNews(request);
+
             if(daoService.addEntity(news) == null){
                 log.error("NewsService addNews failed: returned id == null");
                 request.setAttribute("error", "notadded");
+                request.setAttribute("news", news);
             } else {
                 response.sendRedirect("controller?action=viewAll");
             }
 
         } catch (DAOException | IOException | DateTimeParseException e) {
             log.error("NewsService addNews failed " + e);
-            response.sendRedirect("controller?action=addNewsPage&error=notadded");
+            request.setAttribute("news", news);
+            request.getRequestDispatcher("controller?action=addNewsPage&error=notadded").forward(request, response);
         }
     }
 

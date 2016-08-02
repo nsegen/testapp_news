@@ -12,6 +12,11 @@
         <link href="${pageContext.servletContext.contextPath}/css/bootstrap.min.css" rel="stylesheet">
         <link href="${pageContext.servletContext.contextPath}/css/bootstrap-theme.css" rel="stylesheet">
         <link href="${pageContext.servletContext.contextPath}/css/newslist.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="${pageContext.servletContext.contextPath}/js/bootstrap.min.js"></script>
+        <script src="${pageContext.servletContext.contextPath}/js/bootstrap.file-input.js"></script>
+        <script src="${pageContext.servletContext.contextPath}/js/script.js"></script>
     </head>
     <body>
         <div class="container">

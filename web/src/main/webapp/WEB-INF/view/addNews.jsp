@@ -25,12 +25,22 @@
                         <ul class="nav navbar-nav navbar-right">
                             <c:set value="${sessionScope.locale}" var="loc"/>
                             <li <c:if test="${fn:contains(loc, 'ru')}">class="active"</c:if>>
-                                <a href = "controller?action=addNewsPage&locale=ru">
+                                <c:url value="controller" var = "ruUrl">
+                                    <c:param name="action" value="${param.action}"/>
+                                    <c:param name="locale" value="ru"/>
+                                    <c:param name="id" value="${param.id}"/>
+                                </c:url>
+                                <a href = "${ruUrl}">
                                     <fmt:message key="label.russian" bundle="${lang}"/>
                                 </a>
                             </li>
                             <li <c:if test="${fn:contains(loc, 'en')}">class="active"</c:if>>
-                                <a href = "controller?action=addNewsPage&locale=en">
+                                <c:url value="controller" var = "enUrl">
+                                    <c:param name="action" value="${param.action}"/>
+                                    <c:param name="locale" value="en"/>
+                                    <c:param name="id" value="${param.id}"/>
+                                </c:url>
+                                <a href = "${enUrl}">
                                     <fmt:message key="label.english" bundle="${lang}"/>
                                 </a>
                             </li>
@@ -71,34 +81,38 @@
 
                         <div class="form-group">
                             <label for="inputAuthor"><fmt:message key="label.author" bundle="${lang}"/>:</label>
-                            <input type="text" name="author" placeholder="<fmt:message key="input.enternickname" bundle="${lang}"/>"
-                                   value="${oldNews.author}" class="form-control" id="inputAuthor">
+                            <input type="text" name="author" required placeholder="<fmt:message key="input.enternickname" bundle="${lang}"/>"
+                                   value="${news.author}" class="form-control" id="inputAuthor">
                         </div>
 
                         <div class="form-group">
                             <label for="inputDate"><fmt:message key="label.date" bundle="${lang}"/>:</label>
-                            <input type="date" name="date" value="${oldNews.date}" class="form-control" id="inputDate">
+                            <input type="date" required name="date" value="${news.date}" class="form-control" id="inputDate">
                         </div>
 
                         <div class="form-group">
                             <label for="inputTitle"><fmt:message key="label.title" bundle="${lang}"/>:</label>
-                            <input type="text" name="title" placeholder="<fmt:message key="input.entertitle" bundle="${lang}"/>"
-                                   value="${oldNews.title}" class="form-control" id="inputTitle">
+                            <input type="text" required name="title" placeholder="<fmt:message key="input.entertitle" bundle="${lang}"/>"
+                                   value="${news.title}" class="form-control" id="inputTitle">
                         </div>
 
                         <div class="form-group">
                             <label for="inputContent"><fmt:message key="label.content" bundle="${lang}"/>:</label>
-                            <textarea class="form-control" rows="10" placeholder="<fmt:message key="input.entercontent" bundle="${lang}"/>"
-                                     name="content" id="inputContent"><c:out value="${oldNews.content}" escapeXml="true"/></textarea>
+                            <textarea class="form-control" rows="10" required placeholder="<fmt:message key="input.entercontent" bundle="${lang}"/>"
+                                     name="content" id="inputContent"><c:out value="${news.content}" escapeXml="true"/></textarea>
                         </div>
 
                         <div class="image-input">
                             <label for="inputImage"><fmt:message key="label.image" bundle="${lang}"/>:</label>
-                            <input type="file" class="btn btn-default"
-                                   value="${oldNews.imgUrl}" name="image" title="<fmt:message key="input.enterimage" bundle="${lang}"/>" id="inputImage">
-                            <div>
-                                <img src="${oldNews.imgUrl}"/>
-                            </div>
+                            <input type="file" name="image"
+                                   <c:if test="${param.action == 'addNewsPage'}">required</c:if>
+                                   class="btn btn-default" accept="image/*" title="<fmt:message key="input.enterimage" bundle="${lang}"/>" id="inputImage" />
+                            <output id="list"></output>
+                            <c:if test="${not empty news.imgUrl}">
+                                <div class="row newsImg">
+                                    <img id="chosenImg" class="img-rounded" src="${news.imgUrl}"/>
+                                </div>
+                            </c:if>
                         </div>
 
                         <div class="row">
@@ -107,13 +121,14 @@
                                 <input type="hidden" name="action" value="${nextAction}"/>
                                 <input class="col-md-6 col-lg-6 btn btn-default" type="submit" value="<fmt:message key="label.save" bundle="${lang}"/>">
 
-                                <a class="col-md-6 col-lg-6 btn btn-default" role="button" href="controller?action=viewAll">
+                                <a class="col-md-6 col-lg-6 btn btn-default" role="button" onClick="history.go(-1);">
                                     <fmt:message key="label.cancel" bundle="${lang}"/>
                                 </a>
                             </div>
                         </div>
 
                     </form>
+
                 </div>
             </div>
         </div>
