@@ -54,7 +54,11 @@
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="controller?action=addNewsPage">
+                            <c:url value="controller" var="add">
+                                <c:param name="action" value="addNewsPage"/>
+                                <c:param name="prevPage" value="${param.action}"/>
+                            </c:url>
+                            <a href="${add}">
                                 <fmt:message key="label.addnews" bundle="${lang}"/>
                             </a>
                         </li>
@@ -83,7 +87,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-lg-2 manage">
-                                    <a class="editButton" href="controller?action=editNewsPage&id=${news.id}">
+                                    <c:url value="controller" var="edit">
+                                        <c:param name="action" value="editNewsPage"/>
+                                        <c:param name="id" value="${news.id}"/>
+                                        <c:param name="prevPage" value="${param.action}"/>
+                                    </c:url>
+                                    <a class="editButton" href="${edit}">
                                         <fmt:message key="label.edit" bundle="${lang}"/>
                                     </a>
                                     <a class="viewButton" href="controller?action=viewNews&id=${news.id}">

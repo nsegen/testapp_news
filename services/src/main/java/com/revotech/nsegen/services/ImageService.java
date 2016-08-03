@@ -30,8 +30,20 @@ public class ImageService {
         return null;
     }
 
+    public static boolean deleteImage(String imageUrl){
+
+        final String imageServerUrl = ResourceBundle.getBundle("ImageServer").getString("url");
+
+        StringBuilder imgUrl = new StringBuilder(imageUrl);
+        int start = imageUrl.indexOf(imageServerUrl);
+        imgUrl.delete(start, imageServerUrl.length()+1);
+        File newsImage = new File(imgUrl.toString());
+        return newsImage.delete();
+    }
+
     public static String uploadImage(HttpServletRequest request, String title) throws IOException, ServletException {
         Part part = request.getPart("image");
+        final String imageServerUrl = ResourceBundle.getBundle("ImageServer").getString("url");
         //log.info(MainController.class.getName());
         if(part.getSubmittedFileName().isEmpty()){
             return null;
@@ -53,6 +65,6 @@ public class ImageService {
                     Arrays.toString(new Object[]{fne.getMessage()}));
         }
 
-        return ResourceBundle.getBundle("ImageServer").getString("url") + "/" + path + "/" + title + fileName;
+        return imageServerUrl + "/" + path + "/" + title + fileName;
     }
 }

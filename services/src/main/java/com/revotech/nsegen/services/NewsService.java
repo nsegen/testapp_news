@@ -10,12 +10,14 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
+import java.util.ResourceBundle;
 
 /**
  * Created by Revotech on 06.07.16.
@@ -76,6 +78,9 @@ public class NewsService implements INewsService{
         try{
             news = createNews(request);
             News oldNews = daoService.getNewsById(news.getId());
+            if(news.getImgUrl() != null){
+                ImageService.deleteImage(oldNews.getImgUrl());
+            }
             if(daoService.updateEntity(news, oldNews) == 0){
                 log.error("NewsService editNews failed: amount of changes rows == 0");
                 request.setAttribute("error", "notedited");
@@ -114,13 +119,8 @@ public class NewsService implements INewsService{
                     Integer id = Integer.valueOf(i);
 
                     News news = daoService.getNewsById(id);
-                    StringBuffer imgUrl = new StringBuffer(news.getImgUrl());
-                    int start = news.getImgUrl().indexOf("http://localhost:8083/");
-                    imgUrl.delete(start, "http://localhost:8083/".length());
-                    File newsImage = new File(imgUrl.toString());
-                    if (!newsImage.delete()) {
-                        log.warn("image '" + newsImage.getAbsolutePath() + "' don't deleted");
-                    }
+
+                    ImageService.deleteImage(news.getImgUrl());
 
                     if (daoService.deleteEntity(id) == 0) {
                         notDeleted += id + ", ";

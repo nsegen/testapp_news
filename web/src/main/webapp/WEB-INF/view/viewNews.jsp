@@ -100,7 +100,12 @@
                                 <input type="hidden" value="${news.id}" name="ids">
                                 <input class="btn btn-default" type="submit" value="<fmt:message key="label.delete" bundle="${lang}"/>">
                             </form>
-                            <a class="col-md-6 col-lg-6 btn btn-default" role="button" href="controller?action=editNewsPage&id=${news.id}">
+                            <c:url value="controller" var = "edit">
+                                <c:param name="action" value="editNewsPage"/>
+                                <c:param name="id" value="${news.id}"/>
+                                <c:param name="prevPage" value="${param.action}"/>
+                            </c:url>
+                            <a class="col-md-6 col-lg-6 btn btn-default" role="button" href="${edit}">
                                 <fmt:message key="label.edit" bundle="${lang}"/>
                             </a>
                         </div>

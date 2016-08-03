@@ -27,6 +27,7 @@
                             <li <c:if test="${fn:contains(loc, 'ru')}">class="active"</c:if>>
                                 <c:url value="controller" var = "ruUrl">
                                     <c:param name="action" value="${param.action}"/>
+                                    <c:param name="prevPage" value="${param.prevPage}"/>
                                     <c:param name="locale" value="ru"/>
                                     <c:param name="id" value="${param.id}"/>
                                 </c:url>
@@ -37,6 +38,7 @@
                             <li <c:if test="${fn:contains(loc, 'en')}">class="active"</c:if>>
                                 <c:url value="controller" var = "enUrl">
                                     <c:param name="action" value="${param.action}"/>
+                                    <c:param name="prevPage" value="${param.prevPage}"/>
                                     <c:param name="locale" value="en"/>
                                     <c:param name="id" value="${param.id}"/>
                                 </c:url>
