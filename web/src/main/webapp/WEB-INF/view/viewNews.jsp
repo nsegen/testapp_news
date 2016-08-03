@@ -93,7 +93,7 @@
                         <div class="col-lg-2 col-md-2"><fmt:message key="label.image" bundle="${lang}"/>:</div>
                         <div class="col-lg-10 col-md-10 newsImg"><img class="img-rounded" src="<c:out value="${news.imgUrl}" escapeXml="true"/>"></div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3">
+                    <div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3" style="margin-top: 10px">
                         <div class="row">
                             <form class="col-md-6 col-lg-6" action="controller" method="post">
                                 <input type="hidden" value="delete" name="action">

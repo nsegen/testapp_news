@@ -117,15 +117,17 @@
                             </c:if>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3">
+                        <div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3">
+                            <div class="row">
+
                                 <input type="hidden" name="id" value="${id}"/>
                                 <input type="hidden" name="action" value="${nextAction}"/>
-                                <input class="col-md-6 col-lg-6 btn btn-default" type="submit" value="<fmt:message key="label.save" bundle="${lang}"/>">
+                                <input class="col-md-4 col-lg-4 btn btn-default" type="submit" value="<fmt:message key="label.save" bundle="${lang}"/>">
 
-                                <a class="col-md-6 col-lg-6 btn btn-default" role="button" onClick="history.go(-1);">
+                                <a class="col-md-4 col-lg-4 col-md-2 col-lg-offset-2 btn btn-default" role="button">
                                     <fmt:message key="label.cancel" bundle="${lang}"/>
                                 </a>
+
                             </div>
                         </div>
 
